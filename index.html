@@ -287,6 +287,10 @@ textarea{min-height:90px;resize:vertical}
 .audc .btn{align-self:flex-start}
 @media(max-width:700px){.aud{grid-template-columns:1fr;gap:10px}.audc{padding:15px}.audc .btn{align-self:stretch}}
 .inds div:nth-child(1){background:#fdf0e6;border-color:#c2611f33}.inds div:nth-child(1) span{color:#c2611f;border-color:#c2611f55}.inds div:nth-child(2){background:#fdecea;border-color:#c0392b33}.inds div:nth-child(2) span{color:#c0392b;border-color:#c0392b55}.inds div:nth-child(3){background:#e8f1fb;border-color:#1d5d9b33}.inds div:nth-child(3) span{color:#1d5d9b;border-color:#1d5d9b55}.inds div:nth-child(4){background:#f3ecf8;border-color:#7a4a9c33}.inds div:nth-child(4) span{color:#7a4a9c;border-color:#7a4a9c55}.inds div:nth-child(5){background:#fdf6e3;border-color:#b8860b33}.inds div:nth-child(5) span{color:#b8860b;border-color:#b8860b55}.inds div:nth-child(6){background:#e9f5ea;border-color:#2e7d3233}.inds div:nth-child(6) span{color:#2e7d32;border-color:#2e7d3255}.inds div:nth-child(7){background:#fce8f1;border-color:#c2185b33}.inds div:nth-child(7) span{color:#c2185b;border-color:#c2185b55}.inds div:nth-child(8){background:#e3f5f6;border-color:#00838f33}.inds div:nth-child(8) span{color:#00838f;border-color:#00838f55}
+.hero{background:linear-gradient(90deg,rgba(15,42,68,.94) 0%,rgba(15,42,68,.86) 42%,rgba(15,42,68,.45) 75%,rgba(15,42,68,.25) 100%),url(images/hero/hero-b.jpg) center/cover no-repeat !important}
+.hero:before,.hero:after{display:none !important}
+@media(max-width:700px){.hero{background:var(--navy) !important}.mhero{display:block !important;width:calc(100% + 40px);margin:-8px -20px 18px;aspect-ratio:16/9;object-fit:cover}}
+.mhero{display:none}
 /* footer */
 footer{background:#0a1d30;color:#9fb1c3;padding:46px 0 24px;font-size:14px}
 .fgrid{display:grid;grid-template-columns:1.6fr 1fr 1.2fr;gap:30px;margin-bottom:30px}
@@ -368,6 +372,7 @@ footer a:hover{color:var(--amber)}
   <div class="wrap">
     <div>
       <nav class="mnav" aria-label="Quick links"><a href="#catalogue">Products</a><a href="#export">Export</a><a href="#about">About</a><a href="#sell">Sell With Us</a><a href="#contact">Contact</a></nav>
+      <img class="mhero" src="images/hero/hero-b-m.jpg" alt="Warehouse stocked with plywood, power tools, material handling equipment, furniture and medical beds">
       <span class="eyebrow">B2B Material Supply &amp; Export Partner</span>
       <h1>Many products. <span>One trusted vendor.</span></h1>
       <p>Manufacturers want big orders of one product. You need many products — in the right specification, on time. We bridge that gap: sourcing from verified factories and delivering mixed orders under one purchase order and one GST invoice.</p>
