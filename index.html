@@ -243,6 +243,7 @@ textarea{min-height:90px;resize:vertical}
  .hero .cta{display:grid;grid-template-columns:1fr 1fr;gap:10px}.hero .cta .btn{padding:12px 6px;font-size:14.5px}
  .svc{gap:10px}.svc div{padding:14px 16px;display:grid;grid-template-columns:40px 1fr;column-gap:12px}.svc .si{width:40px;height:40px;grid-row:span 2}.svc h4{margin:0 0 2px;font-size:15px}.svc p{font-size:13.5px}
 }
+.attach input[type=file]{padding:9px;background:var(--bg);border-style:dashed}
 /* footer */
 footer{background:#0a1d30;color:#9fb1c3;padding:46px 0 24px;font-size:14px}
 .fgrid{display:grid;grid-template-columns:1.6fr 1fr 1.2fr;gap:30px;margin-bottom:30px}
@@ -583,6 +584,7 @@ footer a:hover{color:var(--amber)}
 
         <div class="row">
           <div class="f full"><label>Additional message</label><textarea name="msg" style="min-height:70px" placeholder="Delivery address details, timelines, payment terms…"></textarea></div>
+          <div class="f full attach"><label>Attach requirement sheet <span style="font-weight:500;color:var(--muted)">(optional)</span></label><input type="file" id="rfqFile" name="Requirement sheet" accept=".xlsx,.xls,.csv,.pdf,.doc,.docx,.jpg,.jpeg,.png"><span class="hint">Many items? Attach your Excel / PDF / photo list (max 10 MB) — then you can skip the product fields above.</span></div>
         </div>
         <div class="warn" id="ncrWarn">Ply, MDF &amp; Rockwool are supplied only within Delhi NCR (Delhi, Gurugram, Noida, Greater Noida, Ghaziabad, Faridabad).</div>
         <div class="err" id="err"></div>
@@ -961,6 +963,19 @@ form.addEventListener("submit", e=>{
   const err = document.getElementById("err"); const fail = m => { err.textContent = m; err.style.display = "block"; };
   err.style.display = "none";
   const v = n => (form[n].value||"").trim();
+  const fileIn=document.getElementById("rfqFile");
+  if(fileIn && fileIn.files.length){
+    const fl=fileIn.files[0]; if(fl.size>10*1024*1024) return fail("File is too large ("+(fl.size/1048576).toFixed(1)+" MB). Maximum is 10 MB.");
+    if(!v("name")) return fail("Please enter your name.");
+    const dg=v("phone").replace(/\D/g,""); if(dg.length<8||dg.length>15) return fail("Please enter a valid mobile number.");
+    if(!v("city")) return fail("Please enter your delivery / destination city.");
+    form.action="https://formsubmit.co/sales@avssetuglobal.com"; form.method="POST"; form.enctype="multipart/form-data";
+    const add=(n,val)=>{let i=form.querySelector('input[type=hidden][name="'+n+'"]'); if(!i){i=document.createElement("input");i.type="hidden";i.name=n;form.appendChild(i);} i.value=val;};
+    add("_subject","New RFQ with attachment — "+v("name")); add("_template","table"); add("_captcha","false");
+    add("_next","https://avssetuglobal.com/?quote=thanks#quote"); add("Enquiry type", mode==="export"?"Export / International":mode==="custom"?"Customised product":"Listed product");
+    try{sessionStorage.setItem("rfqName",v("name"));}catch(_){}
+    HTMLFormElement.prototype.submit.call(form); return;
+  }
   if(!v("name")) return fail("Please enter your name.");
   const digits = v("phone").replace(/\D/g,"");
   if(mode==="export"){
@@ -1035,6 +1050,12 @@ document.getElementById("yr").textContent = new Date().getFullYear();
 const links = document.getElementById("links");
 document.getElementById("menuBtn").onclick = () => links.classList.toggle("open");
 links.addEventListener("click", ()=>links.classList.remove("open"));
+</script>
+<script>
+if(/quote=thanks/.test(location.search)){ let n=""; try{n=sessionStorage.getItem("rfqName")||"";}catch(_){}
+ const t="Hello AVS Setu Global, I have just sent a quote request with an attached requirement sheet from your website."+(n?" Name: "+n+".":"");
+ setTimeout(()=>openModal(`<div class="done"><div class="ok"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="m5 12 5 5 9-10" stroke="#1f8a5b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Request received</h3><p>Your requirement and attachment have been sent to our sales team. We will reply within 24 hours.</p><div class="acts"><a class="btn btn-amber" href="https://wa.me/918010641067?text=${encodeURIComponent(t)}" target="_blank" rel="noopener">Also notify on WhatsApp</a></div></div>`),300);
+ history.replaceState(null,"",location.pathname+"#quote"); }
 </script>
 </body>
 </html>
