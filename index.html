@@ -109,6 +109,9 @@ section{padding:70px 0}
 .why h4{color:var(--navy);margin:10px 0 6px}
 .why p{font-size:14px;color:var(--muted)}
 .why .n{font-size:28px;font-weight:800;color:var(--amber)}
+/* brands */
+.brandrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.brandrow span{border:1.5px solid var(--line);border-radius:10px;padding:10px 18px;font-weight:800;color:var(--navy);font-size:15px;letter-spacing:.3px}
 /* export */
 .svc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:22px}
 .svc div{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px}
@@ -260,7 +263,7 @@ footer a:hover{color:var(--amber)}
   <div class="wrap">
     <div class="head">
       <div><div class="kicker">Catalogue</div><h2>Our Products</h2></div>
-      <p>Prices depend on quantity, specification and delivery location — request a quote for your best price.</p>
+      <p>Prices depend on quantity, specification and delivery location — request a quote for your best price. <b>Free delivery within Delhi NCR on orders above ₹1,00,000;</b> otherwise freight at actuals.</p>
     </div>
     <div class="tools">
       <div class="search">
@@ -311,6 +314,16 @@ footer a:hover{color:var(--amber)}
       </div>
       <a class="btn btn-navy" href="#quote" onclick="setMode('export')">Send Export Enquiry</a>
     </div>
+  </div>
+</section>
+
+<section id="brands" style="padding:40px 0;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="kicker">Brands we source</div>
+    <div class="brandrow">
+      <span>Bosch</span><span>Makita</span><span>Hilti</span><span>KPT</span><span>CenturyPly</span><span>Gyproc</span>
+    </div>
+    <p class="hint" style="margin-top:10px">Brand names are trademarks of their respective owners. Availability subject to stock.</p>
   </div>
 </section>
 
@@ -404,6 +417,7 @@ footer a:hover{color:var(--amber)}
         <div class="box">
           <h4>Service areas</h4>
           <p><b style="color:#fff">Delhi NCR only:</b> Ply, MDF, Rockwool</p>
+          <p style="margin-top:6px"><b style="color:#fff">Delivery:</b> Free within Delhi NCR on orders above ₹1,00,000. Freight at actuals for other orders and pan-India.</p>
           <p style="margin-top:6px"><b style="color:#fff">Worldwide export:</b> Sourcing, inspection and shipping from India to your country</p>
           <p style="margin-top:6px"><b style="color:#fff">Pan India:</b> Power tools, medical furniture &amp; consumables, office &amp; home furniture, material handling, agriculture equipment, decorative lights</p>
         </div>
@@ -496,39 +510,39 @@ const P = [
   // Medical
   {id:"bed", cat:"med", art:"hbed", name:"Hospital Bed (Manual / Motorised)", moq:2, unit:"units",
    specs:{"Type":"Fowler / Semi-fowler / ICU","Operation":"Manual crank or motorised","Frame":"MS powder-coated / SS","Accessories":"Side rails, IV pole, castors"}, desc:"Hospital and home-care beds with mattress options."},
-  {id:"wheel", cat:"med", art:"wheel", name:"Wheelchair", moq:2, unit:"units",
+  {id:"wheel", cat:"med", art:"wheel", name:"Wheelchair", moq:5, unit:"units",
    specs:{"Type":"Foldable / Commode / Transit","Frame":"Steel or aluminium","Capacity":"Up to 100 – 120 kg","Wheel":"22 – 24 inch rear"}, desc:"Durable folding wheelchairs for hospitals, clinics and home use."},
   {id:"gloves", cat:"med", art:"glove", name:"Nitrile / Latex Examination Gloves", moq:50, unit:"boxes (100 pcs)",
    specs:{"Material":"Nitrile / Latex / Vinyl","Type":"Powder-free","Sizes":"S, M, L, XL","Pack":"100 pcs per box"}, desc:"Disposable examination gloves for medical, lab and food-handling use."},
   {id:"mask", cat:"med", art:"mask", name:"Surgical & N95 Masks", moq:50, unit:"boxes",
    specs:{"Type":"3-ply surgical / N95","Standard":"BIS / ISO certified","Pack":"50 pcs (3-ply), 20 pcs (N95)","Fit":"Ear-loop / head-band"}, desc:"Certified face masks for hospitals, clinics and workplaces."},
   // Furniture
-  {id:"chair", cat:"furn", art:"chair", name:"Ergonomic Office Chair", moq:5, unit:"pcs",
+  {id:"chair", cat:"furn", art:"chair", name:"Ergonomic Office Chair", moq:10, unit:"pcs",
    specs:{"Back":"Mesh, mid / high back","Mechanism":"Synchro tilt","Armrest":"Fixed / adjustable","Base":"Nylon / chrome"}, desc:"Comfortable task and executive chairs for offices and workstations."},
-  {id:"table", cat:"furn", art:"table", name:"Office Table / Workstation", moq:2, unit:"pcs",
+  {id:"table", cat:"furn", art:"table", name:"Office Table / Workstation", moq:5, unit:"pcs",
    specs:{"Top":"25 mm pre-lam board","Size":"Custom, e.g. 1200 × 600 mm","Frame":"MS powder-coated","Options":"Pedestal, wire manager"}, desc:"Desks, workstations and conference tables to your layout."},
-  {id:"sofa", cat:"furn", art:"sofa", name:"Sofa Set", moq:1, unit:"sets",
+  {id:"sofa", cat:"furn", art:"sofa", name:"Sofa Set", moq:1, unit:"set",
    specs:{"Seating":"3+1+1 / L-shape / reception","Upholstery":"Fabric / leatherette","Frame":"Seasoned wood","Use":"Home, office lobby"}, desc:"Home and office lounge sofas in multiple styles and fabrics."},
   {id:"hbed2", cat:"furn", art:"bed", name:"Bed (Wooden / Metal)", moq:2, unit:"pcs",
    specs:{"Size":"Single / Queen / King","Material":"Engineered wood / solid wood / metal","Storage":"Box / hydraulic / none","Use":"Home, hostel, guest house"}, desc:"Durable beds for homes, hostels and staff accommodation."},
   // Material handling
   {id:"trolley", cat:"mh", art:"trolley", name:"Platform Trolley", moq:5, unit:"pcs",
    specs:{"Capacity":"150 – 1000 kg","Platform":"MS / plastic deck","Wheels":"PU / rubber castors","Handle":"Fixed / foldable"}, desc:"Platform trolleys for warehouses, factories and retail stores."},
-  {id:"crate", cat:"mh", art:"crate", name:"Plastic Crates", moq:50, unit:"pcs",
+  {id:"crate", cat:"mh", art:"crate", name:"Plastic Crates", moq:100, unit:"pcs",
    specs:{"Material":"Virgin HDPE / PP","Type":"Solid / perforated","Capacity":"20 – 60 L","Stackable":"Yes"}, desc:"Stackable crates for storage, logistics, agriculture and food handling."},
-  {id:"pallet", cat:"mh", art:"pallet", name:"Hand Pallet Truck", moq:2, unit:"units",
+  {id:"pallet", cat:"mh", art:"pallet", name:"Hand Pallet Truck", moq:1, unit:"unit",
    specs:{"Capacity":"2.5 – 3 tonne","Fork":"Standard 1150 × 540 mm","Wheels":"Nylon / PU","Lift":"Hydraulic"}, desc:"Manual pallet trucks for moving loaded pallets."},
   // Agriculture
-  {id:"sprayer", cat:"agri", art:"sprayer", name:"Battery / Knapsack Sprayer", moq:5, unit:"units",
+  {id:"sprayer", cat:"agri", art:"sprayer", name:"Battery / Knapsack Sprayer", moq:10, unit:"units",
    specs:{"Type":"Battery / manual / petrol","Tank":"16 – 20 L","Battery":"12V 8–12 Ah","Pressure":"Adjustable nozzle"}, desc:"Sprayers for pesticide, fertiliser and sanitisation use."},
-  {id:"chaff", cat:"agri", art:"chaff", name:"Chaff Cutter", moq:2, unit:"units",
+  {id:"chaff", cat:"agri", art:"chaff", name:"Chaff Cutter", moq:1, unit:"unit",
    specs:{"Type":"Manual / electric motor","Motor":"1 – 3 HP","Blades":"2 – 3 blades","Output":"Varies by model"}, desc:"Fodder chaff cutters for dairy farms and livestock owners."},
   // Lights
   {id:"chand", cat:"light", art:"chand", name:"Decorative Chandelier & Hanging Lights", moq:5, unit:"pcs",
    specs:{"Style":"Crystal / modern / vintage","Lamp":"LED compatible","Finish":"Gold, chrome, black","Use":"Homes, hotels, banquets"}, desc:"Statement lighting for living rooms, lobbies and hospitality spaces."},
-  {id:"wall", cat:"light", art:"wall", name:"Wall & Facade Lights", moq:10, unit:"pcs",
+  {id:"wall", cat:"light", art:"wall", name:"Wall & Facade Lights", moq:20, unit:"pcs",
    specs:{"Type":"Up-down / wall-washer","Wattage":"6 – 24 W LED","Rating":"IP65 for outdoor","Colour":"Warm / cool / RGB"}, desc:"Indoor and outdoor decorative wall lighting."},
-  {id:"string", cat:"light", art:"string", name:"LED String & Festive Lights", moq:20, unit:"pcs",
+  {id:"string", cat:"light", art:"string", name:"LED String & Festive Lights", moq:50, unit:"pcs",
    specs:{"Length":"5 – 20 m","Type":"Fairy / curtain / rope","Power":"Plug-in / USB / solar","Colour":"Warm, multi, RGB"}, desc:"Festive and event lighting for homes, offices and venues."}
 ];
 
