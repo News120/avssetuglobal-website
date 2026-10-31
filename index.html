@@ -262,6 +262,10 @@ textarea{min-height:90px;resize:vertical}
 .anote{margin-top:10px;font-size:12px !important;color:var(--muted) !important}
 .mednote{font-size:12px;color:#1f6f8b;background:#e6f3f8;border-radius:8px;padding:6px 9px;margin-bottom:10px}
 @media(max-width:600px){.astats{grid-template-columns:1fr 1fr}.astats b{font-size:21px}}
+.ph .pwrap{background:#f2f2f2 !important}
+.ph .pimg{object-fit:contain !important;padding:8px}
+.mgrid .ph .pimg{padding:24px}
+@media(max-width:600px){.cat .cph{margin:-10px -10px 8px !important;aspect-ratio:4/3}}
 /* footer */
 footer{background:#0a1d30;color:#9fb1c3;padding:46px 0 24px;font-size:14px}
 .fgrid{display:grid;grid-template-columns:1.6fr 1fr 1.2fr;gap:30px;margin-bottom:30px}
@@ -373,15 +377,15 @@ footer a:hover{color:var(--amber)}
     </div>
     <div class="cats" id="cats">
   <button class="cat" data-cat="ply">
-    <div class="ic" style="background:#f6ead8"><svg viewBox="0 0 140 120" width="44" height="38" aria-hidden="true"><g fill="none" stroke="#a8743a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 70 70 45 120 70 70 95Z" fill="#a8743a22"></path><path d="M20 70v8l50 25 50-25v-8"></path><path d="M20 58 70 33 120 58" opacity=".5"></path><path d="M20 46 70 21 120 46" opacity=".3"></path></g></svg></div>
+    <div class="cph"><img src="images/c/ply.jpg" alt="Ply, MDF &amp; Rockwool" loading="lazy" decoding="async" onerror="this.parentNode.nextElementSibling.style.display='';this.parentNode.remove()"></div><div class="ic" style="background:#f6ead8;display:none"><svg viewBox="0 0 140 120" width="44" height="38" aria-hidden="true"><g fill="none" stroke="#a8743a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 70 70 45 120 70 70 95Z" fill="#a8743a22"></path><path d="M20 70v8l50 25 50-25v-8"></path><path d="M20 58 70 33 120 58" opacity=".5"></path><path d="M20 46 70 21 120 46" opacity=".3"></path></g></svg></div>
     <h3>Ply, MDF &amp; Rockwool</h3><p>Plywood, MDF boards, Rockwool insulation</p><span class="tag ncr">Delhi NCR only</span>
   </button>
   <button class="cat" data-cat="tools">
-    <div class="ic" style="background:#e3eefa"><svg viewBox="0 0 140 120" width="44" height="38" aria-hidden="true"><g fill="none" stroke="#1d5d9b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M35 40h55a10 10 0 0 1 10 10v6a10 10 0 0 1-10 10H55" fill="#1d5d9b22"></path><path d="M100 53h18M118 50v6"></path><path d="M55 66l-8 34h20l6-34"></path><rect x="42" y="100" width="30" height="10" rx="3"></rect></g></svg></div>
+    <div class="cph"><img src="images/c/tools.jpg" alt="Power Tools" loading="lazy" decoding="async" onerror="this.parentNode.nextElementSibling.style.display='';this.parentNode.remove()"></div><div class="ic" style="background:#e3eefa;display:none"><svg viewBox="0 0 140 120" width="44" height="38" aria-hidden="true"><g fill="none" stroke="#1d5d9b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M35 40h55a10 10 0 0 1 10 10v6a10 10 0 0 1-10 10H55" fill="#1d5d9b22"></path><path d="M100 53h18M118 50v6"></path><path d="M55 66l-8 34h20l6-34"></path><rect x="42" y="100" width="30" height="10" rx="3"></rect></g></svg></div>
     <h3>Power Tools</h3><p>Drills, grinders, cutters, saws</p><span class="tag india">Pan-India</span>
   </button>
   <button class="cat" data-cat="mh">
-    <div class="ic" style="background:#fdf0dc"><svg viewBox="0 0 140 120" width="44" height="38" aria-hidden="true"><g fill="none" stroke="#c47a0a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 80h85v10H20z" fill="#c47a0a22"></path><path d="M105 85V30h12"></path><circle cx="35" cy="100" r="8"></circle><circle cx="90" cy="100" r="8"></circle><rect x="30" y="55" width="30" height="25" fill="#fff"></rect><rect x="62" y="62" width="30" height="18" fill="#fff"></rect></g></svg></div>
+    <div class="cph"><img src="images/c/mh.jpg" alt="Material Handling" loading="lazy" decoding="async" onerror="this.parentNode.nextElementSibling.style.display='';this.parentNode.remove()"></div><div class="ic" style="background:#fdf0dc;display:none"><svg viewBox="0 0 140 120" width="44" height="38" aria-hidden="true"><g fill="none" stroke="#c47a0a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 80h85v10H20z" fill="#c47a0a22"></path><path d="M105 85V30h12"></path><circle cx="35" cy="100" r="8"></circle><circle cx="90" cy="100" r="8"></circle><rect x="30" y="55" width="30" height="25" fill="#fff"></rect><rect x="62" y="62" width="30" height="18" fill="#fff"></rect></g></svg></div>
     <h3>Material Handling</h3><p>Platform trolleys, crates</p><span class="tag india">Pan-India</span>
   </button><div class="also"><h3>Also supply</h3><div class="alsorow"><button class="alsoc" data-cat="med">Medical Furniture &amp; Consumables</button><button class="alsoc" data-cat="furn">Office &amp; Home Furniture</button><button class="alsoc" data-cat="agri">Agriculture Equipment</button><button class="alsoc" data-cat="light">Decorative Lights</button><button class="alsoc" data-cat="custom">Customised Products</button></div></div></div>
   </div>
@@ -410,49 +414,49 @@ footer a:hover{color:var(--amber)}
     <div class="showing" id="showing"></div>
     <div class="chips" id="chips"></div>
     <div class="grid" id="grid"><div class="card">
-      <div class="ph" style="background:#f6ead8" data-view="ply-bwp"><span class="area"><span class="tag ncr">Delhi NCR only</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#a8743a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 70 70 45 120 70 70 95Z" fill="#a8743a22"></path><path d="M20 70v8l50 25 50-25v-8"></path><path d="M20 58 70 33 120 58" opacity=".5"></path><path d="M20 46 70 21 120 46" opacity=".3"></path></g></svg></div>
+      <div class="ph" style="background:#f6ead8" data-view="ply-bwp"><span class="area"><span class="tag ncr">Delhi NCR only</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#a8743a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 70 70 45 120 70 70 95Z" fill="#a8743a22"></path><path d="M20 70v8l50 25 50-25v-8"></path><path d="M20 58 70 33 120 58" opacity=".5"></path><path d="M20 46 70 21 120 46" opacity=".3"></path></g></svg><span class="pwrap"><img class="pimg" src="images/p/ply-bwp.jpg" alt="BWP Marine Plywood" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></span></div>
       <div class="body">
         <span class="c">Ply, MDF &amp; Rockwool</span><h4>BWP Marine Plywood</h4>
         <ul class="specs"><li><span>Grade</span><b>BWP / Marine (IS 710)</b></li><li><span>Thickness</span><b>6, 9, 12, 18, 25 mm</b></li><li><span>Size</span><b>8 × 4 ft</b></li></ul>
         <div class="moq">MOQ: <b>50 sheets</b></div>
         <div class="acts"><button class="btn btn-line" data-view="ply-bwp">Details</button><button class="btn btn-amber" data-quote="ply-bwp">Best Price</button></div>
       </div></div><div class="card">
-      <div class="ph" style="background:#e3eefa" data-view="drill"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#1d5d9b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M35 40h55a10 10 0 0 1 10 10v6a10 10 0 0 1-10 10H55" fill="#1d5d9b22"></path><path d="M100 53h18M118 50v6"></path><path d="M55 66l-8 34h20l6-34"></path><rect x="42" y="100" width="30" height="10" rx="3"></rect></g></svg></div>
+      <div class="ph" style="background:#e3eefa" data-view="cordless"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#1d5d9b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M35 40h55a10 10 0 0 1 10 10v6a10 10 0 0 1-10 10H55" fill="#1d5d9b22"></path><path d="M100 53h18M118 50v6"></path><path d="M55 66l-8 34h20l6-34"></path><rect x="42" y="100" width="30" height="10" rx="3"></rect></g></svg><span class="pwrap"><img class="pimg" src="images/p/cordless.jpg" alt="Cordless Drill Driver Kit" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></span></div>
       <div class="body">
-        <span class="c">Power Tools</span><h4>Impact Drill Machine</h4>
-        <ul class="specs"><li><span>Power</span><b>550 – 800 W</b></li><li><span>Chuck</span><b>13 mm</b></li><li><span>Speed</span><b>0 – 3000 rpm</b></li></ul>
-        <div class="moq">MOQ: <b>5 pcs</b></div>
-        <div class="acts"><button class="btn btn-line" data-view="drill">Details</button><button class="btn btn-amber" data-quote="drill">Best Price</button></div>
+        <span class="c">Power Tools</span><h4>Cordless Drill Driver Kit</h4>
+        <ul class="specs"><li><span>Battery</span><b>12V / 18V Li-ion</b></li><li><span>Torque</span><b>30 – 60 Nm</b></li><li><span>Kit</span><b>2 batteries + charger</b></li></ul>
+        <div class="moq">MOQ: <b>5 kits</b></div>
+        <div class="acts"><button class="btn btn-line" data-view="cordless">Details</button><button class="btn btn-amber" data-quote="cordless">Best Price</button></div>
       </div></div><div class="card">
-      <div class="ph" style="background:#fdf0dc" data-view="trolley"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#c47a0a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 80h85v10H20z" fill="#c47a0a22"></path><path d="M105 85V30h12"></path><circle cx="35" cy="100" r="8"></circle><circle cx="90" cy="100" r="8"></circle><rect x="30" y="55" width="30" height="25" fill="#fff"></rect><rect x="62" y="62" width="30" height="18" fill="#fff"></rect></g></svg></div>
+      <div class="ph" style="background:#fdf0dc" data-view="trolley"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#c47a0a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 80h85v10H20z" fill="#c47a0a22"></path><path d="M105 85V30h12"></path><circle cx="35" cy="100" r="8"></circle><circle cx="90" cy="100" r="8"></circle><rect x="30" y="55" width="30" height="25" fill="#fff"></rect><rect x="62" y="62" width="30" height="18" fill="#fff"></rect></g></svg><span class="pwrap"><img class="pimg" src="images/p/trolley.jpg" alt="Platform Trolley" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></span></div>
       <div class="body">
         <span class="c">Material Handling</span><h4>Platform Trolley</h4>
         <ul class="specs"><li><span>Capacity</span><b>150 – 1000 kg</b></li><li><span>Platform</span><b>MS / plastic deck</b></li><li><span>Wheels</span><b>PU / rubber castors</b></li></ul>
         <div class="moq">MOQ: <b>5 pcs</b></div>
         <div class="acts"><button class="btn btn-line" data-view="trolley">Details</button><button class="btn btn-amber" data-quote="trolley">Best Price</button></div>
       </div></div><div class="card">
-      <div class="ph" style="background:#f6ead8" data-view="mdf"><span class="area"><span class="tag ncr">Delhi NCR only</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#a8743a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="30" y="20" width="60" height="80" rx="3" fill="#a8743a22"></rect><rect x="50" y="28" width="60" height="80" rx="3" fill="#fff"></rect><path d="M60 45h40M60 60h40M60 75h28"></path></g></svg></div>
+      <div class="ph" style="background:#f6ead8" data-view="mdf"><span class="area"><span class="tag ncr">Delhi NCR only</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#a8743a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="30" y="20" width="60" height="80" rx="3" fill="#a8743a22"></rect><rect x="50" y="28" width="60" height="80" rx="3" fill="#fff"></rect><path d="M60 45h40M60 60h40M60 75h28"></path></g></svg><span class="pwrap"><img class="pimg" src="images/p/mdf.jpg" alt="Plain &amp; Pre-laminated MDF Board" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></span></div>
       <div class="body">
         <span class="c">Ply, MDF &amp; Rockwool</span><h4>Plain &amp; Pre-laminated MDF Board</h4>
         <ul class="specs"><li><span>Type</span><b>Plain / Pre-lam / HDHMR</b></li><li><span>Thickness</span><b>2.5 – 25 mm</b></li><li><span>Size</span><b>8 × 4 ft</b></li></ul>
         <div class="moq">MOQ: <b>50 boards</b></div>
         <div class="acts"><button class="btn btn-line" data-view="mdf">Details</button><button class="btn btn-amber" data-quote="mdf">Best Price</button></div>
       </div></div><div class="card">
-      <div class="ph" style="background:#e3eefa" data-view="grinder"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#1d5d9b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="20" y="52" width="70" height="20" rx="10" fill="#1d5d9b22"></rect><circle cx="105" cy="62" r="20"></circle><circle cx="105" cy="62" r="4"></circle><path d="M60 52V38"></path></g></svg></div>
+      <div class="ph" style="background:#e3eefa" data-view="grinder"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#1d5d9b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="20" y="52" width="70" height="20" rx="10" fill="#1d5d9b22"></rect><circle cx="105" cy="62" r="20"></circle><circle cx="105" cy="62" r="4"></circle><path d="M60 52V38"></path></g></svg><span class="pwrap"><img class="pimg" src="images/p/grinder.jpg" alt="Angle Grinder" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></span></div>
       <div class="body">
         <span class="c">Power Tools</span><h4>Angle Grinder</h4>
         <ul class="specs"><li><span>Power</span><b>670 – 2400 W</b></li><li><span>Disc</span><b>100 / 125 / 180 mm</b></li><li><span>Speed</span><b>Up to 11,000 rpm</b></li></ul>
         <div class="moq">MOQ: <b>5 pcs</b></div>
         <div class="acts"><button class="btn btn-line" data-view="grinder">Details</button><button class="btn btn-amber" data-quote="grinder">Best Price</button></div>
       </div></div><div class="card">
-      <div class="ph" style="background:#fdf0dc" data-view="pallet"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#c47a0a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M45 85h75v8H45z" fill="#c47a0a22"></path><path d="M45 93v-55l-15-8M45 85V40"></path><circle cx="52" cy="102" r="6"></circle><circle cx="112" cy="102" r="6"></circle></g></svg></div>
+      <div class="ph" style="background:#fdf0dc" data-view="pallet"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#c47a0a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M45 85h75v8H45z" fill="#c47a0a22"></path><path d="M45 93v-55l-15-8M45 85V40"></path><circle cx="52" cy="102" r="6"></circle><circle cx="112" cy="102" r="6"></circle></g></svg><span class="pwrap"><img class="pimg" src="images/p/pallet.jpg" alt="Hand Pallet Truck" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></span></div>
       <div class="body">
         <span class="c">Material Handling</span><h4>Hand Pallet Truck</h4>
         <ul class="specs"><li><span>Capacity</span><b>2.5 – 3 tonne</b></li><li><span>Fork</span><b>Standard 1150 × 540 mm</b></li><li><span>Wheels</span><b>Nylon / PU</b></li></ul>
         <div class="moq">MOQ: <b>1 unit</b></div>
         <div class="acts"><button class="btn btn-line" data-view="pallet">Details</button><button class="btn btn-amber" data-quote="pallet">Best Price</button></div>
       </div></div><div class="card">
-      <div class="ph" style="background:#f6ead8" data-view="ply-mr"><span class="area"><span class="tag ncr">Delhi NCR only</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#a8743a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 70 70 45 120 70 70 95Z" fill="#a8743a22"></path><path d="M20 70v8l50 25 50-25v-8"></path><path d="M20 58 70 33 120 58" opacity=".5"></path><path d="M20 46 70 21 120 46" opacity=".3"></path></g></svg></div>
+      <div class="ph" style="background:#f6ead8" data-view="ply-mr"><span class="area"><span class="tag ncr">Delhi NCR only</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#a8743a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 70 70 45 120 70 70 95Z" fill="#a8743a22"></path><path d="M20 70v8l50 25 50-25v-8"></path><path d="M20 58 70 33 120 58" opacity=".5"></path><path d="M20 46 70 21 120 46" opacity=".3"></path></g></svg><span class="pwrap"><img class="pimg" src="images/p/ply-mr.jpg" alt="MR Grade Commercial Plywood" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></span></div>
       <div class="body">
         <span class="c">Ply, MDF &amp; Rockwool</span><h4>MR Grade Commercial Plywood</h4>
         <ul class="specs"><li><span>Grade</span><b>MR (IS 303)</b></li><li><span>Thickness</span><b>4, 6, 12, 18 mm</b></li><li><span>Size</span><b>8 × 4 ft</b></li></ul>
@@ -466,14 +470,14 @@ footer a:hover{color:var(--amber)}
         <div class="moq">MOQ: <b>50 slabs / rolls</b></div>
         <div class="acts"><button class="btn btn-line" data-view="rockwool">Details</button><button class="btn btn-amber" data-quote="rockwool">Best Price</button></div>
       </div></div><div class="card">
-      <div class="ph" style="background:#e3eefa" data-view="cordless"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#1d5d9b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M35 40h55a10 10 0 0 1 10 10v6a10 10 0 0 1-10 10H55" fill="#1d5d9b22"></path><path d="M100 53h18M118 50v6"></path><path d="M55 66l-8 34h20l6-34"></path><rect x="42" y="100" width="30" height="10" rx="3"></rect></g></svg></div>
+      <div class="ph" style="background:#e3eefa" data-view="drill"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#1d5d9b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M35 40h55a10 10 0 0 1 10 10v6a10 10 0 0 1-10 10H55" fill="#1d5d9b22"></path><path d="M100 53h18M118 50v6"></path><path d="M55 66l-8 34h20l6-34"></path><rect x="42" y="100" width="30" height="10" rx="3"></rect></g></svg></div>
       <div class="body">
-        <span class="c">Power Tools</span><h4>Cordless Drill Driver Kit</h4>
-        <ul class="specs"><li><span>Battery</span><b>12V / 18V Li-ion</b></li><li><span>Torque</span><b>30 – 60 Nm</b></li><li><span>Kit</span><b>2 batteries + charger</b></li></ul>
-        <div class="moq">MOQ: <b>5 kits</b></div>
-        <div class="acts"><button class="btn btn-line" data-view="cordless">Details</button><button class="btn btn-amber" data-quote="cordless">Best Price</button></div>
+        <span class="c">Power Tools</span><h4>Impact Drill Machine</h4>
+        <ul class="specs"><li><span>Power</span><b>550 – 800 W</b></li><li><span>Chuck</span><b>13 mm</b></li><li><span>Speed</span><b>0 – 3000 rpm</b></li></ul>
+        <div class="moq">MOQ: <b>5 pcs</b></div>
+        <div class="acts"><button class="btn btn-line" data-view="drill">Details</button><button class="btn btn-amber" data-quote="drill">Best Price</button></div>
       </div></div><div class="card">
-      <div class="ph" style="background:#e3eefa" data-view="saw"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#1d5d9b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="70" cy="70" r="28" fill="#1d5d9b22"></circle><circle cx="70" cy="70" r="6"></circle><path d="M40 40h50l10 18H45z" fill="#fff"></path><path d="M30 98h80"></path></g></svg></div>
+      <div class="ph" style="background:#e3eefa" data-view="saw"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#1d5d9b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="70" cy="70" r="28" fill="#1d5d9b22"></circle><circle cx="70" cy="70" r="6"></circle><path d="M40 40h50l10 18H45z" fill="#fff"></path><path d="M30 98h80"></path></g></svg><span class="pwrap"><img class="pimg" src="images/p/saw.jpg" alt="Circular Saw / Marble Cutter" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></span></div>
       <div class="body">
         <span class="c">Power Tools</span><h4>Circular Saw / Marble Cutter</h4>
         <ul class="specs"><li><span>Power</span><b>1200 – 1500 W</b></li><li><span>Blade</span><b>110 – 185 mm</b></li><li><span>Depth</span><b>Up to 65 mm</b></li></ul>
@@ -487,42 +491,42 @@ footer a:hover{color:var(--amber)}
         <div class="moq">MOQ: <b>100 pcs</b></div>
         <div class="acts"><button class="btn btn-line" data-view="crate">Details</button><button class="btn btn-amber" data-quote="crate">Best Price</button></div>
       </div></div><div class="card">
-      <div class="ph" style="background:#f1e8f7" data-view="chair"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#7a4a9c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M45 20h50l-5 45H50z" fill="#7a4a9c22"></path><path d="M40 70h60v8H40zM70 78v18M45 105l25-9 25 9M38 70V55M102 70V55"></path></g></svg></div>
+      <div class="ph" style="background:#f1e8f7" data-view="chair"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#7a4a9c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M45 20h50l-5 45H50z" fill="#7a4a9c22"></path><path d="M40 70h60v8H40zM70 78v18M45 105l25-9 25 9M38 70V55M102 70V55"></path></g></svg><span class="pwrap"><img class="pimg" src="images/p/chair.jpg" alt="Ergonomic Office Chair" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></span></div>
       <div class="body">
         <span class="c">Furniture</span><h4>Ergonomic Office Chair</h4>
         <ul class="specs"><li><span>Back</span><b>Mesh, mid / high back</b></li><li><span>Mechanism</span><b>Synchro tilt</b></li><li><span>Armrest</span><b>Fixed / adjustable</b></li></ul>
         <div class="moq">MOQ: <b>10 pcs</b></div>
         <div class="acts"><button class="btn btn-line" data-view="chair">Details</button><button class="btn btn-amber" data-quote="chair">Best Price</button></div>
       </div></div><div class="card">
-      <div class="ph" style="background:#f1e8f7" data-view="table"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#7a4a9c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 50h110v10H15z" fill="#7a4a9c22"></path><path d="M22 60v45M118 60v45M85 60h28v30H85zM85 75h28"></path></g></svg></div>
+      <div class="ph" style="background:#f1e8f7" data-view="table"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#7a4a9c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 50h110v10H15z" fill="#7a4a9c22"></path><path d="M22 60v45M118 60v45M85 60h28v30H85zM85 75h28"></path></g></svg><span class="pwrap"><img class="pimg" src="images/p/table.jpg" alt="Office Table / Workstation" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></span></div>
       <div class="body">
         <span class="c">Furniture</span><h4>Office Table / Workstation</h4>
         <ul class="specs"><li><span>Top</span><b>25 mm pre-lam board</b></li><li><span>Size</span><b>Custom, e.g. 1200 × 600 mm</b></li><li><span>Frame</span><b>MS powder-coated</b></li></ul>
         <div class="moq">MOQ: <b>5 pcs</b></div>
         <div class="acts"><button class="btn btn-line" data-view="table">Details</button><button class="btn btn-amber" data-quote="table">Best Price</button></div>
       </div></div><div class="card">
-      <div class="ph" style="background:#f1e8f7" data-view="sofa"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#7a4a9c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M30 45h80v25H30z" fill="#7a4a9c22"></path><path d="M18 60h22v30H18zM100 60h22v30h-22zM40 70h60v20H40zM25 90v10M115 90v10"></path></g></svg></div>
+      <div class="ph" style="background:#f1e8f7" data-view="sofa"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#7a4a9c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M30 45h80v25H30z" fill="#7a4a9c22"></path><path d="M18 60h22v30H18zM100 60h22v30h-22zM40 70h60v20H40zM25 90v10M115 90v10"></path></g></svg><span class="pwrap"><img class="pimg" src="images/p/sofa.jpg" alt="Sofa Set" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></span></div>
       <div class="body">
         <span class="c">Furniture</span><h4>Sofa Set</h4>
         <ul class="specs"><li><span>Seating</span><b>3+1+1 / L-shape / reception</b></li><li><span>Upholstery</span><b>Fabric / leatherette</b></li><li><span>Frame</span><b>Seasoned wood</b></li></ul>
         <div class="moq">MOQ: <b>1 set</b></div>
         <div class="acts"><button class="btn btn-line" data-view="sofa">Details</button><button class="btn btn-amber" data-quote="sofa">Best Price</button></div>
       </div></div><div class="card">
-      <div class="ph" style="background:#f1e8f7" data-view="hbed2"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#7a4a9c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 70h110v18H15z" fill="#7a4a9c22"></path><path d="M15 40v65M125 60v45M25 70v-12h30v12"></path></g></svg></div>
+      <div class="ph" style="background:#f1e8f7" data-view="hbed2"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#7a4a9c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 70h110v18H15z" fill="#7a4a9c22"></path><path d="M15 40v65M125 60v45M25 70v-12h30v12"></path></g></svg><span class="pwrap"><img class="pimg" src="images/p/hbed2.jpg" alt="Bed (Wooden / Metal)" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></span></div>
       <div class="body">
         <span class="c">Furniture</span><h4>Bed (Wooden / Metal)</h4>
         <ul class="specs"><li><span>Size</span><b>Single / Queen / King</b></li><li><span>Material</span><b>Engineered wood / solid wood / metal</b></li><li><span>Storage</span><b>Box / hydraulic / none</b></li></ul>
         <div class="moq">MOQ: <b>2 pcs</b></div>
         <div class="acts"><button class="btn btn-line" data-view="hbed2">Details</button><button class="btn btn-amber" data-quote="hbed2">Best Price</button></div>
       </div></div><div class="card">
-      <div class="ph" style="background:#fdf6d8" data-view="chand"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#b08a00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M70 10v25"></path><path d="M30 45q40 30 80 0"></path><path d="M30 45v12M50 55v15M70 58v18M90 55v15M110 45v12"></path><circle cx="30" cy="62" r="5" fill="#b08a0022"></circle><circle cx="50" cy="75" r="5" fill="#b08a0022"></circle><circle cx="70" cy="81" r="5" fill="#b08a0022"></circle><circle cx="90" cy="75" r="5" fill="#b08a0022"></circle><circle cx="110" cy="62" r="5" fill="#b08a0022"></circle></g></svg></div>
+      <div class="ph" style="background:#fdf6d8" data-view="chand"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#b08a00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M70 10v25"></path><path d="M30 45q40 30 80 0"></path><path d="M30 45v12M50 55v15M70 58v18M90 55v15M110 45v12"></path><circle cx="30" cy="62" r="5" fill="#b08a0022"></circle><circle cx="50" cy="75" r="5" fill="#b08a0022"></circle><circle cx="70" cy="81" r="5" fill="#b08a0022"></circle><circle cx="90" cy="75" r="5" fill="#b08a0022"></circle><circle cx="110" cy="62" r="5" fill="#b08a0022"></circle></g></svg><span class="pwrap"><img class="pimg" src="images/p/chand.jpg" alt="Decorative Chandelier &amp; Hanging Lights" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></span></div>
       <div class="body">
         <span class="c">Lights</span><h4>Decorative Chandelier &amp; Hanging Lights</h4>
         <ul class="specs"><li><span>Style</span><b>Crystal / modern / vintage</b></li><li><span>Lamp</span><b>LED compatible</b></li><li><span>Finish</span><b>Gold, chrome, black</b></li></ul>
         <div class="moq">MOQ: <b>5 pcs</b></div>
         <div class="acts"><button class="btn btn-line" data-view="chand">Details</button><button class="btn btn-amber" data-quote="chand">Best Price</button></div>
       </div></div><div class="card">
-      <div class="ph" style="background:#fdf6d8" data-view="wall"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#b08a00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 15v95"></path><rect x="45" y="45" width="30" height="34" rx="4" fill="#b08a0022"></rect><path d="M60 45l-10-25M60 45l10-25M60 79l-10 25M60 79l10 25" opacity=".55"></path></g></svg></div>
+      <div class="ph" style="background:#fdf6d8" data-view="wall"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#b08a00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 15v95"></path><rect x="45" y="45" width="30" height="34" rx="4" fill="#b08a0022"></rect><path d="M60 45l-10-25M60 45l10-25M60 79l-10 25M60 79l10 25" opacity=".55"></path></g></svg><span class="pwrap"><img class="pimg" src="images/p/wall.jpg" alt="Wall &amp; Facade Lights" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></span></div>
       <div class="body">
         <span class="c">Lights</span><h4>Wall &amp; Facade Lights</h4>
         <ul class="specs"><li><span>Type</span><b>Up-down / wall-washer</b></li><li><span>Wattage</span><b>6 – 24 W LED</b></li><li><span>Rating</span><b>IP65 for outdoor</b></li></ul>
@@ -536,7 +540,7 @@ footer a:hover{color:var(--amber)}
         <div class="moq">MOQ: <b>50 pcs</b></div>
         <div class="acts"><button class="btn btn-line" data-view="string">Details</button><button class="btn btn-amber" data-quote="string">Best Price</button></div>
       </div></div><div class="card">
-      <div class="ph" style="background:#e9f3df" data-view="sprayer"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#4f7f24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="40" y="30" width="40" height="60" rx="12" fill="#4f7f2422"></rect><path d="M60 30v-8M80 75q20 0 25 10l15-25M120 60l6-4"></path><path d="M45 90l-5 15M75 90l5 15"></path></g></svg></div>
+      <div class="ph" style="background:#e9f3df" data-view="sprayer"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#4f7f24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="40" y="30" width="40" height="60" rx="12" fill="#4f7f2422"></rect><path d="M60 30v-8M80 75q20 0 25 10l15-25M120 60l6-4"></path><path d="M45 90l-5 15M75 90l5 15"></path></g></svg><span class="pwrap"><img class="pimg" src="images/p/sprayer.jpg" alt="Battery / Knapsack Sprayer" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></span></div>
       <div class="body">
         <span class="c">Agriculture</span><h4>Battery / Knapsack Sprayer</h4>
         <ul class="specs"><li><span>Type</span><b>Battery / manual / petrol</b></li><li><span>Tank</span><b>16 – 20 L</b></li><li><span>Battery</span><b>12V 8–12 Ah</b></li></ul>
@@ -550,21 +554,21 @@ footer a:hover{color:var(--amber)}
         <div class="moq">MOQ: <b>1 unit</b></div>
         <div class="acts"><button class="btn btn-line" data-view="chaff">Details</button><button class="btn btn-amber" data-quote="chaff">Best Price</button></div>
       </div></div><div class="card">
-      <div class="ph" style="background:#e3f4ee" data-view="bed"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#1f8a5b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 70h100v12H20z" fill="#1f8a5b22"></path><path d="M20 82v20M120 82v20M20 40v42M120 55v27"></path><path d="M30 70l25-22h30"></path><circle cx="25" cy="104" r="4"></circle><circle cx="115" cy="104" r="4"></circle></g></svg></div>
+      <div class="ph" style="background:#e3f4ee" data-view="bed"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#1f8a5b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 70h100v12H20z" fill="#1f8a5b22"></path><path d="M20 82v20M120 82v20M20 40v42M120 55v27"></path><path d="M30 70l25-22h30"></path><circle cx="25" cy="104" r="4"></circle><circle cx="115" cy="104" r="4"></circle></g></svg><span class="pwrap"><img class="pimg" src="images/p/bed.jpg" alt="Hospital Bed (Manual / Motorised)" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></span></div>
       <div class="body">
         <span class="c">Medical</span><h4>Hospital Bed (Manual / Motorised)</h4>
         <ul class="specs"><li><span>Type</span><b>Fowler / Semi-fowler / ICU</b></li><li><span>Operation</span><b>Manual crank or motorised</b></li><li><span>Frame</span><b>MS powder-coated / SS</b></li></ul>
         <div class="mednote">Supplied &amp; invoiced by our licensed (MD-42) partner distributor</div><div class="moq">MOQ: <b>2 units</b></div>
         <div class="acts"><button class="btn btn-line" data-view="bed">Details</button><button class="btn btn-amber" data-quote="bed">Best Price</button></div>
       </div></div><div class="card">
-      <div class="ph" style="background:#e3f4ee" data-view="wheel"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#1f8a5b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="60" cy="80" r="26" fill="#1f8a5b22"></circle><circle cx="60" cy="80" r="4"></circle><path d="M45 25v35h40l10 25M45 60l-5 0M85 60v-15"></path><circle cx="100" cy="100" r="6"></circle></g></svg></div>
+      <div class="ph" style="background:#e3f4ee" data-view="wheel"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#1f8a5b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="60" cy="80" r="26" fill="#1f8a5b22"></circle><circle cx="60" cy="80" r="4"></circle><path d="M45 25v35h40l10 25M45 60l-5 0M85 60v-15"></path><circle cx="100" cy="100" r="6"></circle></g></svg><span class="pwrap"><img class="pimg" src="images/p/wheel.jpg" alt="Wheelchair" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></span></div>
       <div class="body">
         <span class="c">Medical</span><h4>Wheelchair</h4>
         <ul class="specs"><li><span>Type</span><b>Foldable / Commode / Transit</b></li><li><span>Frame</span><b>Steel or aluminium</b></li><li><span>Capacity</span><b>Up to 100 – 120 kg</b></li></ul>
         <div class="mednote">Supplied &amp; invoiced by our licensed (MD-42) partner distributor</div><div class="moq">MOQ: <b>5 units</b></div>
         <div class="acts"><button class="btn btn-line" data-view="wheel">Details</button><button class="btn btn-amber" data-quote="wheel">Best Price</button></div>
       </div></div><div class="card">
-      <div class="ph" style="background:#e3f4ee" data-view="gloves"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#1f8a5b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M50 105V60l-8-15q-3-8 4-9t10 7l4 10V25q0-7 6-7t6 7v28V20q0-7 6-7t6 7v33V27q0-6 6-6t6 6v38q0 25-10 40z" fill="#1f8a5b22"></path></g></svg></div>
+      <div class="ph" style="background:#e3f4ee" data-view="gloves"><span class="area"><span class="tag india">Pan-India</span></span><svg viewBox="0 0 140 120" width="150" height="128" aria-hidden="true"><g fill="none" stroke="#1f8a5b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M50 105V60l-8-15q-3-8 4-9t10 7l4 10V25q0-7 6-7t6 7v28V20q0-7 6-7t6 7v33V27q0-6 6-6t6 6v38q0 25-10 40z" fill="#1f8a5b22"></path></g></svg><span class="pwrap"><img class="pimg" src="images/p/gloves.jpg" alt="Nitrile / Latex Examination Gloves" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></span></div>
       <div class="body">
         <span class="c">Medical</span><h4>Nitrile / Latex Examination Gloves</h4>
         <ul class="specs"><li><span>Material</span><b>Nitrile / Latex / Vinyl</b></li><li><span>Type</span><b>Powder-free</b></li><li><span>Sizes</span><b>S, M, L, XL</b></li></ul>
@@ -923,10 +927,10 @@ const STATES = ["Delhi","Haryana","Uttar Pradesh","Andhra Pradesh","Arunachal Pr
 const NCR_CITIES = ["delhi","new delhi","gurugram","gurgaon","noida","greater noida","ghaziabad","faridabad"];
 
 /* ---------- product illustrations (replace with real photos later) ---------- */
-const IMG = {};
-function photo(p,w){const id=IMG[p.id]; if(!id) return ""; const u=`https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`; return `<span class="pwrap"><img class="pbg" src="${u}" alt="" aria-hidden="true" loading="lazy" decoding="async"><img class="pimg" src="${u}" alt="${p.name}" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></span>`;}
-const CIMG = {};
-function catPhoto(c){const v=CIMG[c.id]; if(!v) return ""; const [id,pos]=v; return `<div class=\"cph\"><img src=\"https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=700\" alt=\"${c.name}\" loading=\"lazy\" decoding=\"async\" style=\"object-position:${pos||'50% 50%'}\" onerror=\"this.parentNode.nextElementSibling.style.display='';this.parentNode.remove()\"></div>`;}
+const IMG = {"bed":1,"chair":1,"chand":1,"cordless":1,"gloves":1,"grinder":1,"hbed2":1,"mdf":1,"pallet":1,"ply-bwp":1,"ply-mr":1,"saw":1,"sofa":1,"sprayer":1,"table":1,"trolley":1,"wall":1,"wheel":1};
+function photo(p,w){ if(!IMG[p.id]) return ""; return `<span class="pwrap"><img class="pimg" src="images/p/${p.id}.jpg" alt="${p.name}" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></span>`; }
+const CIMG = {ply:1,tools:1,mh:1};
+function catPhoto(c){ if(!CIMG[c.id]) return ""; return `<div class="cph"><img src="images/c/${c.id}.jpg" alt="${c.name}" loading="lazy" decoding="async" onerror="this.parentNode.nextElementSibling.style.display='';this.parentNode.remove()"></div>`; }
 function art(kind, s){
   const g = `fill="none" stroke="${s}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"`;
   const A = {
@@ -981,7 +985,7 @@ function renderGrid(){
   const q = document.getElementById("q").value.trim().toLowerCase();
   const list = P.filter(p => (curCat==="all"||p.cat===curCat) &&
     (!q || (p.name+" "+catById(p.cat).name+" "+Object.values(p.specs).join(" ")+" "+p.desc).toLowerCase().includes(q)));
-  if(curCat==="all"){ const FEAT=["ply-bwp","drill","trolley","mdf","grinder","pallet"], ORD=["ply","tools","mh","furn","light","agri","med"]; const rk=p=>{const f=FEAT.indexOf(p.id); return f>=0?f:100+ORD.indexOf(p.cat)*50+P.indexOf(p);}; list.sort((a,b)=>rk(a)-rk(b)); }
+  if(curCat==="all"){ const FEAT=["ply-bwp","cordless","trolley","mdf","grinder","pallet"], ORD=["ply","tools","mh","furn","light","agri","med"]; const rk=p=>{const f=FEAT.indexOf(p.id); return f>=0?f:100+ORD.indexOf(p.cat)*50+P.indexOf(p);}; list.sort((a,b)=>rk(a)-rk(b)); }
   const SHOWN=(curCat==="all"&&!q&&!window.SHOWALL)?list.slice(0,6):list;
   document.getElementById("showing").innerHTML = curCat==="all" ? `Showing <b>${q?list.length+" matching":(SHOWN.length<list.length?"6 of "+list.length:"all "+list.length)}</b> products` : `Showing <b>${catById(curCat).name}</b> · <a href="#catalogue" data-chip="all">View all products</a>`;
   document.getElementById("grid").innerHTML = SHOWN.map(p=>{

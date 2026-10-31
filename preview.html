@@ -262,6 +262,10 @@ textarea{min-height:90px;resize:vertical}
 .anote{margin-top:10px;font-size:12px !important;color:var(--muted) !important}
 .mednote{font-size:12px;color:#1f6f8b;background:#e6f3f8;border-radius:8px;padding:6px 9px;margin-bottom:10px}
 @media(max-width:600px){.astats{grid-template-columns:1fr 1fr}.astats b{font-size:21px}}
+.ph .pwrap{background:#f2f2f2 !important}
+.ph .pimg{object-fit:contain !important;padding:8px}
+.mgrid .ph .pimg{padding:24px}
+@media(max-width:600px){.cat .cph{margin:-10px -10px 8px !important;aspect-ratio:4/3}}
 /* footer */
 footer{background:#0a1d30;color:#9fb1c3;padding:46px 0 24px;font-size:14px}
 .fgrid{display:grid;grid-template-columns:1.6fr 1fr 1.2fr;gap:30px;margin-bottom:30px}
@@ -743,10 +747,10 @@ const STATES = ["Delhi","Haryana","Uttar Pradesh","Andhra Pradesh","Arunachal Pr
 const NCR_CITIES = ["delhi","new delhi","gurugram","gurgaon","noida","greater noida","ghaziabad","faridabad"];
 
 /* ---------- product illustrations (replace with real photos later) ---------- */
-const IMG = {};
-function photo(p,w){const id=IMG[p.id]; if(!id) return ""; const u=`https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`; return `<span class="pwrap"><img class="pbg" src="${u}" alt="" aria-hidden="true" loading="lazy" decoding="async"><img class="pimg" src="${u}" alt="${p.name}" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></span>`;}
-const CIMG = (location.search.includes('b')?{ply:[7479035],tools:[2317384],med:[5049242],furn:[6752295],mh:[12522022],agri:[31834386],light:[38470511],custom:[1797428]}:{ply:[7479035],tools:[8821538,"50% 80%"],med:[12081340],furn:[12269763],mh:[4487382],agri:[17903068],light:[4057749],custom:[12585837]});
-function catPhoto(c){const v=CIMG[c.id]; if(!v) return ""; const [id,pos]=v; return `<div class=\"cph\"><img src=\"https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=700\" alt=\"${c.name}\" loading=\"lazy\" decoding=\"async\" style=\"object-position:${pos||'50% 50%'}\" onerror=\"this.parentNode.nextElementSibling.style.display='';this.parentNode.remove()\"></div>`;}
+const IMG = {"bed":1,"chair":1,"chand":1,"cordless":1,"gloves":1,"grinder":1,"hbed2":1,"mdf":1,"pallet":1,"ply-bwp":1,"ply-mr":1,"saw":1,"sofa":1,"sprayer":1,"table":1,"trolley":1,"wall":1,"wheel":1};
+function photo(p,w){ if(!IMG[p.id]) return ""; return `<span class="pwrap"><img class="pimg" src="images/p/${p.id}.jpg" alt="${p.name}" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></span>`; }
+const CIMG = {ply:1,tools:1,mh:1};
+function catPhoto(c){ if(!CIMG[c.id]) return ""; return `<div class="cph"><img src="images/c/${c.id}.jpg" alt="${c.name}" loading="lazy" decoding="async" onerror="this.parentNode.nextElementSibling.style.display='';this.parentNode.remove()"></div>`; }
 function art(kind, s){
   const g = `fill="none" stroke="${s}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"`;
   const A = {
@@ -801,7 +805,7 @@ function renderGrid(){
   const q = document.getElementById("q").value.trim().toLowerCase();
   const list = P.filter(p => (curCat==="all"||p.cat===curCat) &&
     (!q || (p.name+" "+catById(p.cat).name+" "+Object.values(p.specs).join(" ")+" "+p.desc).toLowerCase().includes(q)));
-  if(curCat==="all"){ const FEAT=["ply-bwp","drill","trolley","mdf","grinder","pallet"], ORD=["ply","tools","mh","furn","light","agri","med"]; const rk=p=>{const f=FEAT.indexOf(p.id); return f>=0?f:100+ORD.indexOf(p.cat)*50+P.indexOf(p);}; list.sort((a,b)=>rk(a)-rk(b)); }
+  if(curCat==="all"){ const FEAT=["ply-bwp","cordless","trolley","mdf","grinder","pallet"], ORD=["ply","tools","mh","furn","light","agri","med"]; const rk=p=>{const f=FEAT.indexOf(p.id); return f>=0?f:100+ORD.indexOf(p.cat)*50+P.indexOf(p);}; list.sort((a,b)=>rk(a)-rk(b)); }
   const SHOWN=(curCat==="all"&&!q&&!window.SHOWALL)?list.slice(0,6):list;
   document.getElementById("showing").innerHTML = curCat==="all" ? `Showing <b>${q?list.length+" matching":(SHOWN.length<list.length?"6 of "+list.length:"all "+list.length)}</b> products` : `Showing <b>${catById(curCat).name}</b> · <a href="#catalogue" data-chip="all">View all products</a>`;
   document.getElementById("grid").innerHTML = SHOWN.map(p=>{
