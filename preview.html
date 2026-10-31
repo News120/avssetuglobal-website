@@ -190,6 +190,12 @@ footer a{text-decoration:none}
 footer a:hover{color:var(--amber)}
 .copy{border-top:1px solid rgba(255,255,255,.08);padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px}
 .wa{position:fixed;right:18px;bottom:18px;width:56px;height:56px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.25);z-index:50}
+#sell{background:var(--bg)}
+#sell form{max-width:860px;margin:0 auto;border:1px solid var(--line)}
+.fsec{font-size:15px;color:var(--navy);margin:6px 0 12px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.chk{display:flex;gap:10px;align-items:flex-start;font-weight:500;font-size:13px;color:var(--ink);margin-top:6px}
+.chk input{width:18px;height:18px;flex:0 0 18px;margin-top:2px}
+#sell .thanks{max-width:860px;margin:0 auto;background:#e3f4ee;color:#14532d;border-radius:var(--radius);padding:22px;font-weight:600}
 @media(max-width:960px){
   .svc{grid-template-columns:1fr 1fr}.steps{grid-template-columns:repeat(3,1fr)}
   .hero .wrap,.qwrap{grid-template-columns:1fr}
@@ -214,7 +220,7 @@ footer a:hover{color:var(--amber)}
 }
 </style>
 </head>
-<body><div style="position:fixed;top:0;left:0;right:0;z-index:9999;background:#0f2a44;color:#fff;font:600 14px system-ui;padding:8px;text-align:center">PREVIEW (not live) — <a style="color:#e8a317" href="preview.html">Option A</a> · <a style="color:#e8a317" href="preview.html?b">Option B</a></div>
+<body><div style="position:fixed;top:0;left:0;right:0;z-index:9999;background:#0f2a44;color:#fff;font:600 14px system-ui;padding:8px;text-align:center">PREVIEW (not live) — <a style="color:#e8a317" href="preview.html">Option A</a> · <a style="color:#e8a317" href="preview.html?b">Option B</a> · <a style="color:#e8a317" href="#sell">Sell form</a></div>
 
 <header>
   <div class="wrap nav">
@@ -228,6 +234,7 @@ footer a:hover{color:var(--amber)}
       <a href="#export">Global Export</a>
       <a href="#why">Why Us</a>
       <a href="#quote">Get Quote</a>
+      <a href="#sell">Sell With Us</a>
       <a href="#contact">Contact</a>
     </nav>
     <a class="btn btn-amber" href="#quote">Request Best Price</a>
@@ -446,6 +453,64 @@ footer a:hover{color:var(--amber)}
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="sell">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="kicker">For manufacturers &amp; suppliers</div><h2>Sell With Us</h2></div>
+      <p>Supply your products through AVS Setu Global. Share your product details below — we verify every supplier before listing. Your price and contact details are kept private and are never shown on the website.</p>
+    </div>
+    <form id="sellForm" action="https://formsubmit.co/sales@avssetuglobal.com" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="_subject" value="New supplier listing request — AVS Setu Global website">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://avssetuglobal.com/preview.html?supplier=thanks#sell">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+      <h3 class="fsec">1. Supplier details</h3>
+      <div class="row">
+        <div class="f"><label>Company / seller name <em>*</em></label><input name="Seller name" required></div>
+        <div class="f"><label>Contact person <em>*</em></label><input name="Contact person" required></div>
+        <div class="f"><label>Mobile / WhatsApp <em>*</em></label><input name="Mobile" type="tel" required pattern="[0-9+ ]{10,15}" placeholder="10-digit mobile"></div>
+        <div class="f"><label>Email <em>*</em></label><input name="email" type="email" required></div>
+        <div class="f"><label>GSTIN <em>*</em></label><input name="GSTIN" required maxlength="15" pattern="[0-9A-Za-z]{15}" placeholder="15-character GST number" style="text-transform:uppercase"></div>
+        <div class="f"><label>Seller type <em>*</em></label><select name="Seller type" required><option value="">Select</option><option>Manufacturer</option><option>Authorised distributor / dealer</option><option>Trader / stockist</option></select></div>
+        <div class="f full"><label>Office address <em>*</em></label><textarea name="Office address" required style="min-height:60px"></textarea></div>
+      </div>
+
+      <h3 class="fsec">2. Product details</h3>
+      <div class="row">
+        <div class="f"><label>Category <em>*</em></label><select name="Category" required><option value="">Select</option><option>Ply, MDF &amp; Rockwool</option><option>Power Tools</option><option>Medical Furniture &amp; Consumables</option><option>Office &amp; Home Furniture</option><option>Material Handling</option><option>Agriculture Equipment</option><option>Decorative Lights</option><option>Other</option></select></div>
+        <div class="f"><label>Product name <em>*</em></label><input name="Product name" required></div>
+        <div class="f"><label>Brand / make</label><input name="Brand" placeholder="Unbranded / own brand / brand name"></div>
+        <div class="f"><label>HSN code &amp; GST rate</label><input name="HSN and GST rate" placeholder="e.g. 4412, 18%"></div>
+        <div class="f full"><label>Description &amp; full specifications <em>*</em></label><textarea name="Specifications" required placeholder="Size, material, grade, capacity, power, standards (ISI/BIS), warranty…"></textarea></div>
+      </div>
+
+      <h3 class="fsec">3. Price &amp; supply</h3>
+      <div class="row">
+        <div class="f"><label>Cost price per unit (without logistics) <em>*</em></label><input name="Cost price per unit" required placeholder="e.g. ₹1,250 per sheet"></div>
+        <div class="f"><label>GST in this price? <em>*</em></label><select name="GST in price" required><option value="">Select</option><option>GST extra</option><option>GST included</option></select></div>
+        <div class="f"><label>Minimum order quantity <em>*</em></label><input name="MOQ" required placeholder="e.g. 50 sheets"></div>
+        <div class="f"><label>Stock / lead time</label><input name="Stock and lead time" placeholder="e.g. Ready stock / 7 days"></div>
+        <div class="f"><label>Price valid till</label><input name="Price valid till" type="date"></div>
+        <div class="f"><label>Packed weight &amp; size (per unit)</label><input name="Packed weight and size" placeholder="e.g. 32 kg, 8×4 ft"></div>
+        <div class="f"><label>Pickup location <em>*</em></label><input name="Pickup location" required placeholder="City / area"></div>
+        <div class="f"><label>Pickup pincode <em>*</em></label><input name="Pickup pincode" required pattern="[0-9]{6}" maxlength="6" inputmode="numeric"></div>
+      </div>
+
+      <h3 class="fsec">4. Photos &amp; product list</h3>
+      <div class="row">
+        <div class="f full"><label>Product photos (up to 3) <em>*</em></label><input type="file" name="Product photos" accept="image/jpeg,image/png" multiple required id="sellPhotos"><span class="hint">Clear photos of the actual product. JPG/PNG.</span></div>
+        <div class="f full"><label>Full product list / catalogue (optional)</label><input type="file" name="Product list" accept=".pdf,.xls,.xlsx,.csv" id="sellList"><span class="hint">Excel or PDF if you supply many products. All files together must be under 10 MB.</span></div>
+      </div>
+      <label class="chk"><input type="checkbox" required> I confirm the details are correct and I agree that AVS Setu Global may contact me and list the product after verification. Seller details and cost price will not be published.</label>
+      <div class="err" id="sellErr"></div>
+      <button class="btn btn-navy" type="submit" style="width:100%;margin-top:14px">Submit Product for Listing</button>
+      <p class="hint" style="margin-top:10px;text-align:center">We respond within 2 working days. Submitting does not guarantee listing.</p>
+    </form>
+    <div class="thanks" id="sellThanks" style="display:none">✅ Thank you! Your product details have been received. Our team will verify and contact you within 2 working days.</div>
   </div>
 </section>
 
@@ -785,6 +850,12 @@ document.querySelectorAll(".phoneTxt").forEach(e=>e.textContent=CONFIG.phone);
 document.querySelectorAll(".emailTxt").forEach(e=>e.textContent=CONFIG.email);
 document.querySelectorAll(".addrTxt").forEach(e=>e.textContent=CONFIG.address);
 document.querySelectorAll(".regTxt").forEach(e=>e.textContent=CONFIG.regOffice);
+
+(function(){const f=document.getElementById('sellForm'); if(!f) return; const err=document.getElementById('sellErr');
+ if(/supplier=thanks/.test(location.search)){f.style.display='none';document.getElementById('sellThanks').style.display='block';}
+ f.addEventListener('submit',e=>{err.style.display='none'; const ph=document.getElementById('sellPhotos').files, li=document.getElementById('sellList').files; let tot=0; for(const x of ph) tot+=x.size; for(const x of li) tot+=x.size;
+  let m=''; if(ph.length>3) m='Please attach maximum 3 photos.'; else if(tot>10*1024*1024) m='Files are too large ('+(tot/1048576).toFixed(1)+' MB). Total must be under 10 MB — send smaller photos.'; else if(!f.checkValidity()){m='Please fill all fields marked *.'; f.reportValidity();}
+  if(m){e.preventDefault(); err.textContent=m; err.style.display='block';}});})();
 /* GSTIN: add a <li>GSTIN: ...</li> in the footer contact list once the trade-name amendment is approved */
 document.getElementById("waFloat").href = waLink("Hi AVS Setu Global, I'd like a quote.");
 document.getElementById("waFloat").target = "_blank";
