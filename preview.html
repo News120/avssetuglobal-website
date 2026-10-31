@@ -747,7 +747,7 @@ const STATES = ["Delhi","Haryana","Uttar Pradesh","Andhra Pradesh","Arunachal Pr
 const NCR_CITIES = ["delhi","new delhi","gurugram","gurgaon","noida","greater noida","ghaziabad","faridabad"];
 
 /* ---------- product illustrations (replace with real photos later) ---------- */
-const IMG = {"bed":1,"chair":1,"chand":1,"cordless":1,"gloves":1,"grinder":1,"hbed2":1,"mdf":1,"pallet":1,"ply-bwp":1,"ply-mr":1,"saw":1,"sofa":1,"sprayer":1,"table":1,"trolley":1,"wall":1,"wheel":1};
+const IMG = {"bed":1,"chair":1,"chand":1,"cordless":1,"crate":1,"gloves":1,"grinder":1,"hbed2":1,"mask":1,"mdf":1,"pallet":1,"ply-bwp":1,"ply-mr":1,"rockwool":1,"saw":1,"sofa":1,"sprayer":1,"string":1,"table":1,"trolley":1,"wall":1,"wheel":1};
 function photo(p,w){ if(!IMG[p.id]) return ""; return `<span class="pwrap"><img class="pimg" src="images/p/${p.id}.jpg" alt="${p.name}" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></span>`; }
 const CIMG = {ply:1,tools:1,mh:1};
 function catPhoto(c){ if(!CIMG[c.id]) return ""; return `<div class="cph"><img src="images/c/${c.id}.jpg" alt="${c.name}" loading="lazy" decoding="async" onerror="this.parentNode.nextElementSibling.style.display='';this.parentNode.remove()"></div>`; }
