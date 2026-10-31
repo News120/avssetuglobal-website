@@ -268,6 +268,11 @@ textarea{min-height:90px;resize:vertical}
 .mgrid .ph .pimg{padding:24px}
 @media(max-width:600px){.cat .cph{margin:-10px -10px 8px !important;aspect-ratio:4/3}}
 .stephead{margin:30px 0 14px}.stephead h3{color:var(--navy);font-size:21px;margin:2px 0 4px}.stephead p{color:var(--muted);font-size:14.5px}
+.xsteps{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:6px}
+.xsteps li{display:flex;gap:12px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+.xsteps b{flex:0 0 34px;height:34px;border-radius:50%;background:var(--navy);color:var(--amber);display:grid;place-items:center;font-size:16px}
+.xsteps h4{color:var(--navy);font-size:15.5px;margin-bottom:3px}.xsteps p{font-size:13.5px;color:var(--muted)}
+@media(max-width:960px){.xsteps{grid-template-columns:1fr 1fr}}@media(max-width:600px){.xsteps{grid-template-columns:1fr;gap:10px}.xsteps li{padding:13px}}
 /* footer */
 footer{background:#0a1d30;color:#9fb1c3;padding:46px 0 24px;font-size:14px}
 .fgrid{display:grid;grid-template-columns:1.6fr 1fr 1.2fr;gap:30px;margin-bottom:30px}
@@ -602,23 +607,8 @@ footer a:hover{color:var(--amber)}
       <div><div class="kicker">For international buyers</div><h2>Source from India. We handle the rest.</h2></div>
       <p>Buying from India from abroad? As a <b>merchant exporter</b>, we buy from verified Indian manufacturers and export in our own name — one contract, one invoice, one point of responsibility. Inspection, freight and customs are handled through our trusted logistics and inspection partners.</p>
     </div>
-    <div class="svc">
-      <div><span class="si"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span><h3>Supplier sourcing</h3><p>We shortlist verified Indian manufacturers, compare quotes and negotiate the best price — for our catalogue or any product you need.</p></div>
-      <div><span class="si"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Quality inspection</h3><p>Samples, in-production checks and pre-shipment inspection with photo/video reports, through independent inspection partners.</p></div>
-      <div><span class="si"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg></span><h3>Packing &amp; consolidation</h3><p>Export-grade packing, palletising and fumigation (through certified partners) where needed. Goods from several suppliers combined into one shipment.</p></div>
-      <div><span class="si"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></svg></span><h3>Export documentation</h3><p>Commercial invoice, packing list, shipping bill, certificate of origin and other documents your customs needs.</p></div>
-      <div><span class="si"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20c2 1 4 1 6 0s4-1 6 0 4 1 6 0M4 18l-1-5h18l-2 5M6 13V7h12v6M12 4v3"/></svg></span><h3>Freight forwarding</h3><p>Sea (FCL / LCL), air cargo and courier through partner forwarders, with customs clearance at the Indian end.</p></div>
-      <div><span class="si"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22V4M4 4h12l-2 4 2 4H4"/></svg></span><h3>Delivery to you</h3><p>Ship to your port (FOB / CIF) or door-to-door (DAP / DDP) — you choose how much we manage.</p></div>
-    </div>
     <div class="stephead"><div class="kicker">Our export process</div><h3>How we deliver your order — step by step</h3><p>Every export order follows these 6 steps, so you always know where your order stands.</p></div>
-    <div class="steps">
-      <div><b>1</b><span>Send your requirement</span></div>
-      <div><b>2</b><span>Get sourced quote + freight estimate</span></div>
-      <div><b>3</b><span>Approve sample / spec</span></div>
-      <div><b>4</b><span>Production &amp; inspection</span></div>
-      <div><b>5</b><span>Packing, documents, dispatch</span></div>
-      <div><b>6</b><span>Delivered &amp; tracked</span></div>
-    </div>
+    <ol class="xsteps"><li><b>1</b><div><h4>Send your requirement</h4><p>Share products, specifications, quantity and destination — or attach your requirement sheet.</p></div></li><li><b>2</b><div><h4>Sourcing &amp; quote</h4><p>We shortlist verified Indian manufacturers and send you one quote with product price and freight estimate.</p></div></li><li><b>3</b><div><h4>Sample &amp; specification approval</h4><p>You approve samples or final specifications before production starts.</p></div></li><li><b>4</b><div><h4>Production &amp; quality inspection</h4><p>In-production checks and pre-shipment inspection with photo/video reports, through independent inspection partners.</p></div></li><li><b>5</b><div><h4>Packing, documents &amp; dispatch</h4><p>Export-grade packing and palletising, commercial invoice, packing list, shipping bill and certificate of origin. Sea (FCL/LCL), air or courier through partner forwarders.</p></div></li><li><b>6</b><div><h4>Delivered &amp; tracked</h4><p>Shipped to your port (FOB / CIF) or door-to-door (DAP / DDP), with tracking updates until delivery.</p></div></li></ol>
     <div class="custom" style="margin-top:26px">
       <div>
         <h3>Shipping terms we work on</h3>
