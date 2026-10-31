@@ -207,6 +207,8 @@ textarea{min-height:90px;resize:vertical}
 .strip .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:14px 20px;justify-content:stretch}
 @media(max-width:600px){.strip .wrap{grid-template-columns:1fr 1fr}.strip div{font-size:13px}}
 @media(min-width:961px){.hero .wrap{grid-template-columns:1.35fr .65fr}.cta4 .btn{padding:11px 15px}}
+.mnav{display:none}
+@media(max-width:960px){.menu-btn{display:none !important}.links{display:none !important}.mnav{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:22px}.mnav a{text-align:center;text-decoration:none;color:#fff;font-weight:700;font-size:13.5px;padding:9px 4px;border-radius:9px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);white-space:nowrap}.hero .wrap{padding-top:26px}}
 /* footer */
 footer{background:#0a1d30;color:#9fb1c3;padding:46px 0 24px;font-size:14px}
 .fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.1fr;gap:30px;margin-bottom:30px}
@@ -287,6 +289,7 @@ footer a:hover{color:var(--amber)}
 <div class="hero" id="top">
   <div class="wrap">
     <div>
+      <nav class="mnav" aria-label="Quick links"><a href="#categories">Categories</a><a href="#catalogue">Products</a><a href="#export">Export</a><a href="#about">About</a><a href="#sell">Sell With Us</a><a href="#contact">Contact</a></nav>
       <span class="eyebrow">B2B Material Supply &amp; Export Partner</span>
       <h1>One bridge for all your <span>project &amp; business</span> material needs</h1>
       <p>Ply, MDF, Rockwool, power tools, medical &amp; office furniture, material handling, agriculture equipment and lighting — sourced right, priced right, delivered on time. Overseas buyer? We source in India and ship to your country.</p>
