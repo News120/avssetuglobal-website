@@ -397,7 +397,7 @@ footer a:hover{color:var(--amber)}
   <div class="wrap">
     <div><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i> GST invoices</div>
     <div><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></i> Quotes within 24 hrs</div>
-    <div><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></i> Pan-India delivery</div>
+    <div><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></i> Pan-India delivery <small style="font-weight:500;color:var(--muted)">(Ply/MDF: Delhi NCR)</small></div>
     <div><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></i> Export from India</div>
   </div>
   </div>
@@ -482,6 +482,7 @@ footer a:hover{color:var(--amber)}
           <div><b>13+</b><span>Manufacturer (OEM) partnerships managed</span></div>
           <div><b>10–18%</b><span>Material cost savings delivered</span></div>
         </div>
+        <p class="anote" style="font-weight:700;color:var(--navy) !important">Formerly AVS Solutions — same team, new name.</p>
         <p class="anote">Founder’s track record in previous roles.</p>
       </div>
       <div class="avals">
@@ -497,7 +498,7 @@ footer a:hover{color:var(--amber)}
 <section id="quote">
   <div class="wrap">
     <div class="head">
-      <div><div class="kicker" style="color:var(--amber)">Request for quotation</div><h2>Get Your Best Price</h2></div>
+      <div><div class="kicker" style="color:var(--amber)">Request for quotation</div><h2>Get Best Price</h2></div>
       <p>Fill in your requirement. Our team will respond with pricing, availability and delivery timeline.</p>
     </div>
     <div class="qwrap">
@@ -658,7 +659,7 @@ footer a:hover{color:var(--amber)}
         <h3 class="fh">Company</h3>
         <ul>
           <li><a href="#about">About us</a></li>
-          <li><a href="#export">Import from India</a></li>
+          <li><a href="#export">Export</a></li>
           <li><a href="#sell">Sell With Us</a></li>
           <li><a href="privacy.html">Privacy Policy</a></li>
           <li><a href="terms.html">Terms &amp; Conditions</a></li>
@@ -879,7 +880,7 @@ function openDetail(id){
       <p class="desc">${p.desc}</p>
       <ul class="specs">${sp}</ul>
       <div class="moq">Minimum order: <b>${p.moq} ${p.unit}</b>${c.area==="ncr"?"<br><span style='color:#b4520a'>Delivery within Delhi NCR only</span>":""}${c.id==="med"?"<br><span style='color:#1f6f8b'>Medical devices are supplied and invoiced directly by our licensed (MD-42) partner distributor; we coordinate the order.</span>":""}</div>
-      <button class="btn btn-amber" style="width:100%" onclick="closeModal();quoteFor('${p.id}')">Request Best Price</button>
+      <button class="btn btn-amber" style="width:100%" onclick="closeModal();quoteFor('${p.id}')">Get Best Price</button>
     </div></div>`);
 }
 
