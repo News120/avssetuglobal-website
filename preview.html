@@ -58,6 +58,7 @@ header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.96);backdro
 .hero p{font-size:17px;color:#c9d6e3;max-width:540px;margin-bottom:28px}
 .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
 .stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-content:center}
+.stats .stat:last-child{grid-column:1/-1}
 .stat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:20px}
 .stat b{font-size:28px;color:var(--amber);display:block}
 .stat span{font-size:13.5px;color:#c9d6e3}
@@ -258,7 +259,6 @@ footer a:hover{color:var(--amber)}
       </div>
     </div>
     <div class="stats">
-      <div class="stat"><b>8</b><span>Product categories</span></div>
       <div class="stat"><b>Pan India</b><span>Delivery on most categories</span></div>
       <div class="stat"><b>24 hrs</b><span>Quote turnaround target</span></div>
       <div class="stat"><b>Worldwide</b><span>Export sourcing &amp; logistics</span></div>
