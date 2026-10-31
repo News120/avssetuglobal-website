@@ -255,6 +255,13 @@ textarea{min-height:90px;resize:vertical}
 .alsoc{border:1.5px solid var(--line);background:var(--bg);border-radius:30px;padding:8px 14px;font:inherit;font-size:14px;font-weight:600;color:var(--navy);cursor:pointer}
 .alsoc:hover{border-color:var(--amber)}
 @media(max-width:600px){.cats{gap:8px !important}.cat{padding:10px !important}.cat h3{font-size:13px !important}.cat .tag{font-size:10.5px;padding:2px 7px}.alsoc{font-size:13px;padding:7px 12px}}
+.astats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}
+.astats div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px}
+.astats b{display:block;font-size:24px;color:var(--amber2);line-height:1.15}
+.astats span{font-size:12.5px;color:var(--muted);line-height:1.35;display:block;margin-top:4px}
+.anote{margin-top:10px;font-size:12px !important;color:var(--muted) !important}
+.mednote{font-size:12px;color:#1f6f8b;background:#e6f3f8;border-radius:8px;padding:6px 9px;margin-bottom:10px}
+@media(max-width:600px){.astats{grid-template-columns:1fr 1fr}.astats b{font-size:21px}}
 /* footer */
 footer{background:#0a1d30;color:#9fb1c3;padding:46px 0 24px;font-size:14px}
 .fgrid{display:grid;grid-template-columns:1.6fr 1fr 1.2fr;gap:30px;margin-bottom:30px}
@@ -407,10 +414,10 @@ footer a:hover{color:var(--amber)}
   <div class="wrap">
     <div class="head">
       <div><div class="kicker">For international buyers</div><h2>Source from India. We handle the rest.</h2></div>
-      <p>Buying from India from abroad? We find the right manufacturers, inspect the goods, pack them for export, prepare the paperwork and ship to your port or doorstep — through our trusted logistics and inspection partners.</p>
+      <p>Buying from India from abroad? As a <b>merchant exporter</b>, we buy from verified Indian manufacturers and export in our own name — one contract, one invoice, one point of responsibility. Inspection, freight and customs are handled through our trusted logistics and inspection partners.</p>
     </div>
     <div class="svc">
-      <div><span class="si"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span><h3>Supplier sourcing</h3><p>We shortlist verified Indian manufacturers, compare quotes and negotiate on your behalf — for our catalogue or any product you need.</p></div>
+      <div><span class="si"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span><h3>Supplier sourcing</h3><p>We shortlist verified Indian manufacturers, compare quotes and negotiate the best price — for our catalogue or any product you need.</p></div>
       <div><span class="si"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Quality inspection</h3><p>Samples, in-production checks and pre-shipment inspection with photo/video reports, through independent inspection partners.</p></div>
       <div><span class="si"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg></span><h3>Packing &amp; consolidation</h3><p>Export-grade packing, palletising and fumigation (through certified partners) where needed. Goods from several suppliers combined into one shipment.</p></div>
       <div><span class="si"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></svg></span><h3>Export documentation</h3><p>Commercial invoice, packing list, shipping bill, certificate of origin and other documents your customs needs.</p></div>
@@ -444,16 +451,14 @@ footer a:hover{color:var(--amber)}
     <div class="about">
       <div class="abox">
         <h3>Founder-led, procurement-first</h3>
-        <p>AVS Setu Global is founded and run by a procurement and supply-chain professional with <b>9+ years</b> of experience across highway EPC projects, retail fit-out and B2B industrial supply. We buy the way large project teams buy — clear specifications, competitive quotes, verified sources and on-time delivery — and bring that discipline to businesses of every size.</p>
-        <p style="margin-top:12px;font-weight:700;color:var(--navy)">The founder’s track record in previous roles:</p>
-        <ul class="aticks" style="margin-top:8px">
-          <li>Procurement for highway EPC projects worth <b>₹1,100+ crore</b> each</li>
-          <li><b>10–18%</b> material cost savings delivered through OEM-direct sourcing</li>
-          <li>Managed <b>13+ manufacturer (OEM) partnerships</b> and the full RFQ cycle for enterprise buyers</li>
-          <li>Built pan-India vendor networks with performance-based vendor scorecards</li>
-          <li>Bulk sourcing of civil, MEP and industrial materials — steel, cement, bitumen, tools, furniture and more</li>
-          <li>Post-graduate in Project Management (NICMAR) · B.Tech Mechanical Engineering</li>
-        </ul>
+        <p>AVS Setu Global is led by a mechanical engineer with a post-graduate qualification in project management and <b>9+ years</b> in procurement and supply chain across large infrastructure projects, fit-out and B2B industrial supply. We buy the way large project teams buy — clear specifications, competitive quotes, verified sources and on-time delivery.</p>
+        <div class="astats">
+          <div><b>9+ yrs</b><span>Procurement &amp; supply-chain experience</span></div>
+          <div><b>₹3,500 Cr+</b><span>Infrastructure projects supported</span></div>
+          <div><b>13+</b><span>Manufacturer (OEM) partnerships managed</span></div>
+          <div><b>10–18%</b><span>Material cost savings delivered</span></div>
+        </div>
+        <p class="anote">Founder’s track record in previous roles.</p>
       </div>
       <div class="avals">
         <div><b>Right specification</b><span>We confirm grade, size and standards before quoting.</span></div>
@@ -548,7 +553,7 @@ footer a:hover{color:var(--amber)}
 <section id="faq">
   <div class="wrap">
     <div class="head"><div><div class="kicker">FAQ</div><h2>Common questions</h2></div><p>Quick answers about payment, delivery and orders.</p></div>
-    <div class="faq"><details><summary>What are your payment terms?</summary><p>100% advance for first and customised orders. For confirmed larger orders, 70% advance and 30% before dispatch. Exact terms are stated in each quotation.</p></details><details><summary>How soon will I get a quote?</summary><p>Within 24 hours on working days (Sunday to Friday) of receiving your complete requirement — product, specification, quantity and delivery location.</p></details><details><summary>Do you charge for delivery?</summary><p>Delivery is free on orders above ₹1,00,000 (before GST) within Delhi NCR, across all categories. Outside Delhi NCR, freight is charged at actual cost and shown in the quote.</p></details><details><summary>Can I combine different products in one order?</summary><p>Yes. Each product’s minimum order quantity (MOQ) still applies, and the order value counts together for free delivery within Delhi NCR.</p></details><details><summary>Will I get a GST invoice?</summary><p>Yes. Every order is billed with a proper GST invoice.</p></details><details><summary>What if goods arrive damaged or wrong?</summary><p>Inform us within 48 hours of delivery with photos. After verification we replace or credit the affected items. See our <a href="terms.html">Terms</a>.</p></details><details><summary>Do you ship outside India?</summary><p>Yes. We source in India and ship worldwide through our logistics partners on EXW, FOB, CIF, DAP or DDP terms. Unless agreed otherwise, import duties and clearance at destination are the buyer’s responsibility.</p></details><details><summary>I am a manufacturer or supplier. Can I sell through you?</summary><p>Yes — use the <a href="#sell">Sell With Us</a> form. We verify every supplier before listing, and your price and contact details stay private.</p></details></div>
+    <div class="faq"><details><summary>What are your payment terms?</summary><p>100% advance for first and customised orders. For confirmed larger orders, 70% advance and 30% before dispatch. Exact terms are stated in each quotation.</p></details><details><summary>How soon will I get a quote?</summary><p>Within 24 hours on working days (Sunday to Friday) of receiving your complete requirement — product, specification, quantity and delivery location.</p></details><details><summary>Do you charge for delivery?</summary><p>Delivery is free on orders above ₹1,00,000 (before GST) within Delhi NCR, across all categories. Outside Delhi NCR, freight is charged at actual cost and shown in the quote.</p></details><details><summary>Can I combine different products in one order?</summary><p>Yes. Each product’s minimum order quantity (MOQ) still applies, and the order value counts together for free delivery within Delhi NCR.</p></details><details><summary>Will I get a GST invoice?</summary><p>Yes. Every order is billed with a proper GST invoice.</p></details><details><summary>What if goods arrive damaged or wrong?</summary><p>Inform us within 48 hours of delivery with photos. After verification we replace or credit the affected items. See our <a href="terms.html">Terms</a>.</p></details><details><summary>Do you ship outside India?</summary><p>Yes. As a merchant exporter we buy in India and export in our own name, shipping worldwide through our logistics partners on EXW, FOB, CIF, DAP or DDP terms. Unless agreed otherwise, import duties and clearance at destination are the buyer’s responsibility.</p></details><details><summary>I am a manufacturer or supplier. Can I sell through you?</summary><p>Yes — use the <a href="#sell">Sell With Us</a> form. We verify every supplier before listing, and your price and contact details stay private.</p></details></div>
   </div>
 </section>
 
@@ -807,7 +812,7 @@ function renderGrid(){
       <div class="body">
         <span class="c">${c.short}</span><h4>${p.name}</h4>
         <ul class="specs">${sp}</ul>
-        <div class="moq">MOQ: <b>${p.moq} ${p.unit}</b></div>
+        ${p.cat==="med"?`<div class="mednote">Supplied &amp; invoiced by our licensed (MD-42) partner distributor</div>`:""}<div class="moq">MOQ: <b>${p.moq} ${p.unit}</b></div>
         <div class="acts"><button class="btn btn-line" data-view="${p.id}">Details</button><button class="btn btn-amber" data-quote="${p.id}">Best Price</button></div>
       </div></div>`;
   }).join("") + (SHOWN.length<list.length?`<div class="more"><button class="btn btn-navy" onclick="window.SHOWALL=1;renderGrid()">Show all ${list.length} products</button><p class="hint">Or pick a category above</p></div>`:"");
@@ -846,7 +851,7 @@ function openDetail(id){
       <span class="c">${c.name}</span><h3>${p.name}</h3>
       <p class="desc">${p.desc}</p>
       <ul class="specs">${sp}</ul>
-      <div class="moq">Minimum order: <b>${p.moq} ${p.unit}</b>${c.area==="ncr"?"<br><span style='color:#b4520a'>Delivery within Delhi NCR only</span>":""}</div>
+      <div class="moq">Minimum order: <b>${p.moq} ${p.unit}</b>${c.area==="ncr"?"<br><span style='color:#b4520a'>Delivery within Delhi NCR only</span>":""}${c.id==="med"?"<br><span style='color:#1f6f8b'>Medical devices are supplied and invoiced directly by our licensed (MD-42) partner distributor; we coordinate the order.</span>":""}</div>
       <button class="btn btn-amber" style="width:100%" onclick="closeModal();quoteFor('${p.id}')">Request Best Price</button>
     </div></div>`);
 }
