@@ -286,6 +286,13 @@ textarea{min-height:90px;resize:vertical}
 .audc li:before{content:"✓";position:absolute;left:0;color:var(--amber);font-weight:800}
 .audc .btn{align-self:flex-start}
 @media(max-width:700px){.aud{grid-template-columns:1fr;gap:10px}.audc{padding:15px}.audc .btn{align-self:stretch}}
+#verify{background:#fff;border-top:1px solid var(--line)}
+.vgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.vcard{border:1px solid var(--line);border-top:4px solid var(--green);border-radius:12px;padding:16px;background:var(--bg)}
+.vcard b{display:block;color:var(--navy);margin-bottom:4px}.vcard p{font-size:13.5px;color:var(--muted)}.vcard p b{display:inline;color:var(--ink)}
+.vcard a{display:inline-block;margin-top:8px;font-size:13.5px;font-weight:700;color:var(--green);text-decoration:none}
+.vnote{font-size:12.5px;color:var(--muted);margin-top:12px}
+@media(max-width:960px){.vgrid{grid-template-columns:1fr 1fr}}@media(max-width:600px){.vgrid{grid-template-columns:1fr}}
 /* footer */
 footer{background:#0a1d30;color:#9fb1c3;padding:46px 0 24px;font-size:14px}
 .fgrid{display:grid;grid-template-columns:1.6fr 1fr 1.2fr;gap:30px;margin-bottom:30px}
@@ -485,6 +492,14 @@ footer a:hover{color:var(--amber)}
         <div><b>Clean paperwork</b><span>Proper quotations, GST invoices and dispatch documents.</span></div>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="verify">
+  <div class="wrap">
+    <div class="head"><div><div class="kicker">Verify us</div><h2>Check us before you buy</h2></div><p>We are a registered business. Verify our details yourself on official government portals before placing an order.</p></div>
+    <div class="vgrid"><div class="vcard"><b>GST registered</b><p>GSTIN <b>09FKUPS9355B1ZB</b></p><a href="https://services.gst.gov.in/services/searchtp" target="_blank" rel="noopener">Check on the GST portal →</a></div><div class="vcard"><b>MSME (Udyam) registered</b><p><b>UDYAM-UP-05-0030921</b> · Micro enterprise</p><a href="https://udyamregistration.gov.in/Udyam_Verify.aspx" target="_blank" rel="noopener">Check on the Udyam portal →</a></div><div class="vcard"><b>Registered business</b><p>Proprietorship · Registered office: Amethi, Uttar Pradesh · Operations: Delhi</p></div><div class="vcard"><b>Safe payments</b><p>Proforma invoice before every payment. Payments only to our business bank account — never to a personal account.</p></div></div>
+    <p class="vnote">GST and Udyam are registered under the trade name <b>AVS Solutions</b>; the name amendment to AVS Setu Global is in process.</p>
   </div>
 </section>
 
