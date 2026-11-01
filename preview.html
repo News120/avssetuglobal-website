@@ -592,6 +592,7 @@ footer a:hover{color:var(--amber)}
     <form id="sellForm" style="display:none" action="https://formsubmit.co/sales@avssetuglobal.com" method="POST" enctype="multipart/form-data">
       <input type="hidden" name="_subject" value="New supplier listing request — AVS Setu Global website">
       <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_autoresponse" id="sellAR" value="">
       <input type="hidden" name="_next" value="https://avssetuglobal.com/preview.html?supplier=thanks#sell">
       <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
@@ -944,7 +945,7 @@ form.addEventListener("submit", e=>{
     if(!v("city")) return fail("Please enter your delivery / destination city.");
     form.action="https://formsubmit.co/sales@avssetuglobal.com"; form.method="POST"; form.enctype="multipart/form-data";
     const add=(n,val)=>{let i=form.querySelector('input[type=hidden][name="'+n+'"]'); if(!i){i=document.createElement("input");i.type="hidden";i.name=n;form.appendChild(i);} i.value=val;};
-    add("_subject","New RFQ with attachment — "+v("name")); add("_template","table"); add("_captcha","false");
+    add("_subject","New RFQ with attachment — "+v("name")); if(v("email")) add("_autoresponse", avsAutoReply(v("name"), "your attached requirement", false)); add("_template","table"); add("_captcha","false");
     add("_next","https://avssetuglobal.com/?quote=thanks#quote"); add("Enquiry type", mode==="export"?"Export / International":mode==="custom"?"Customised product":"Listed product");
     try{sessionStorage.setItem("rfqName",v("name"));}catch(_){}
     HTMLFormElement.prototype.submit.call(form); return;
@@ -986,7 +987,7 @@ form.addEventListener("submit", e=>{
     `Mobile: ${v("phone")}`, v("email")?`Email: ${v("email")}`:null,
     mode==="export" ? `Destination: ${v("city")}, ${v("country")}` : `Delivery: ${v("city")}, ${v("state")}`, v("msg")?`Message: ${v("msg")}`:null
   ].filter(x=>x!==null).join("\n");
-  let mailOk=null; fetch("https://formsubmit.co/ajax/sales@avssetuglobal.com",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify({_subject:"New quote request — "+v("name"),_template:"box",name:v("name"),phone:v("phone"),email:v("email")||"-",request:text})}).then(r=>r.json()).then(j=>{const el=document.getElementById("mailst"); if(el) el.innerHTML=(j&&String(j.success)==="true")?"✓ Your request has also been emailed to our sales team.":"";}).catch(()=>{});
+  let mailOk=null; fetch("https://formsubmit.co/ajax/sales@avssetuglobal.com",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(Object.assign({_subject:"New quote request — "+v("name"),_template:"box",name:v("name"),phone:v("phone"),email:v("email")||"-",request:text}, v("email")?{_autoresponse:avsAutoReply(v("name"), mode==="listed"&&P.find(x=>x.id===sel.value)?P.find(x=>x.id===sel.value).name:(mode==="custom"?v("cname"):"export sourcing"), false)}:{}))}).then(r=>r.json()).then(j=>{const el=document.getElementById("mailst"); if(el) el.innerHTML=(j&&String(j.success)==="true")?"✓ Your request has also been emailed to our sales team.":"";}).catch(()=>{});
 
   openModal(`<div class="done">
     <div class="ok"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="m5 12 5 5 9-10" stroke="#1f8a5b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -1015,7 +1016,14 @@ document.querySelectorAll(".regTxt").forEach(e=>e.textContent=CONFIG.regOffice);
  if(/supplier=thanks/.test(location.search)){f.style.display='none';const so=document.getElementById('sellOpen'); if(so) so.style.display='none';document.getElementById('sellThanks').style.display='block';}
  f.addEventListener('submit',e=>{err.style.display='none'; const ph=document.getElementById('sellPhotos').files, li=document.getElementById('sellList').files; let tot=0; for(const x of ph) tot+=x.size; for(const x of li) tot+=x.size;
   let m=''; if(ph.length>3) m='Please attach maximum 3 photos.'; else if(tot>10*1024*1024) m='Files are too large ('+(tot/1048576).toFixed(1)+' MB). Total must be under 10 MB — send smaller photos.'; else if(!f.checkValidity()){m='Please fill all fields marked *.'; f.reportValidity();}
-  if(m){e.preventDefault(); err.textContent=m; err.style.display='block';}});})();
+  if(m){e.preventDefault(); err.textContent=m; err.style.display='block'; return;} const ar=document.getElementById('sellAR'); if(ar) ar.value=avsAutoReply(f.querySelector('[name="Contact person"]').value, f.querySelector('[name="Product name"]').value, true);});})();
+
+function avsAutoReply(name, what, isSupplier){
+  const first=(name||"").trim().split(/\s+/)[0]||"there";
+  const sig="\n\nWarm regards,\nSales Team\nAVS Setu Global — Source · Connect · Deliver\n+91 80106 41067 (Call / WhatsApp) | sales@avssetuglobal.com | avssetuglobal.com\nWorking hours: Sun–Fri, 9:30 AM – 8:30 PM IST (Saturday closed)";
+  if(isSupplier) return "Dear "+first+",\n\nThank you for sharing your product details"+(what?" for "+what:"")+" with AVS Setu Global. We have received your submission and our team will review it and contact you within 2 working days.\n\nPlease keep your latest price list and product photos handy for our call."+sig;
+  return "Dear "+first+",\n\nThank you for your enquiry"+(what?" for "+what:"")+". We have received your request and our team will get back to you with the best price and delivery timeline within 24 hours on working days.\n\nFor anything urgent, please WhatsApp us on +91 80106 41067."+sig;
+}
 /* GSTIN: add a <li>GSTIN: ...</li> in the footer contact list once the trade-name amendment is approved */
 document.getElementById("waFloat").href = waLink("Hi AVS Setu Global, I'd like a quote.");
 document.getElementById("waFloat").target = "_blank";
