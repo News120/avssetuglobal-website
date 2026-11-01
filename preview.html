@@ -513,7 +513,7 @@ footer a:hover{color:var(--amber)}
           <div class="f"><label>Full name <em>*</em></label><input name="name" required></div>
           <div class="f"><label>Company / Organisation</label><input name="company"></div>
           <div class="f"><label>Mobile / WhatsApp <em>*</em></label><input name="phone" type="tel" placeholder="10-digit mobile" required></div>
-          <div class="f"><label>Email</label><input name="email" type="email"></div>
+          <div class="f"><label>Email <em>*</em></label><input name="email" type="email" required placeholder="you@company.com"></div>
           <div class="f" id="cityF"><label id="cityL">Delivery city <em>*</em></label><input name="city" required placeholder="e.g. Gurugram"></div>
           <div class="f" id="stateF"><label>State <em>*</em></label><select name="state" required></select></div>
           <div class="f" id="countryF" style="display:none"><label>Country <em>*</em></label><input name="country" placeholder="e.g. UAE, Kenya, UK"></div>
@@ -940,7 +940,7 @@ form.addEventListener("submit", e=>{
   const fileIn=document.getElementById("rfqFile");
   if(fileIn && fileIn.files.length){
     const fl=fileIn.files[0]; if(fl.size>10*1024*1024) return fail("File is too large ("+(fl.size/1048576).toFixed(1)+" MB). Maximum is 10 MB.");
-    if(!v("name")) return fail("Please enter your name.");
+    if(!v("name")) return fail("Please enter your name."); if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v("email"))) return fail("Please enter a valid email address.");
     const dg=v("phone").replace(/\D/g,""); if(dg.length<8||dg.length>15) return fail("Please enter a valid mobile number.");
     if(!v("city")) return fail("Please enter your delivery / destination city.");
     form.action="https://formsubmit.co/sales@avssetuglobal.com"; form.method="POST"; form.enctype="multipart/form-data";
@@ -950,7 +950,7 @@ form.addEventListener("submit", e=>{
     try{sessionStorage.setItem("rfqName",v("name"));}catch(_){}
     HTMLFormElement.prototype.submit.call(form); return;
   }
-  if(!v("name")) return fail("Please enter your name.");
+  if(!v("name")) return fail("Please enter your name."); if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v("email"))) return fail("Please enter a valid email address.");
   const digits = v("phone").replace(/\D/g,"");
   if(mode==="export"){
     if(digits.length < 8 || digits.length > 15) return fail("Please enter a valid phone number with country code.");
