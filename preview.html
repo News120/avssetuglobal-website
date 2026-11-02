@@ -211,7 +211,7 @@ textarea{min-height:90px;resize:vertical}
 .strip .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:14px 20px;justify-content:stretch}
 @media(max-width:600px){.strip .wrap{grid-template-columns:1fr 1fr}.strip div{font-size:13px}}
 @media(min-width:961px){.hero .wrap{grid-template-columns:1.35fr .65fr}.cta4 .btn{padding:11px 15px}}
-.mnav{display:none}
+.mnav{display:none}.mnav a.mq{background:var(--amber) !important;color:#1a1a1a !important;border-color:var(--amber) !important}
 @media(max-width:960px){.menu-btn{display:none !important}.links{display:none !important}.mnav{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:22px}.mnav a{text-align:center;text-decoration:none;color:#fff;font-weight:700;font-size:13.5px;padding:9px 4px;border-radius:9px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);white-space:nowrap}.hero .wrap{padding-top:26px}}
 .hero .wrap{grid-template-columns:1fr !important;max-width:1180px}
 .hero .wrap>div:first-child{max-width:720px}
@@ -344,6 +344,7 @@ footer a:hover{color:var(--amber)}
   .mgrid .ph{min-height:200px}
   section{padding:50px 0}
 }
+@media(max-width:960px){.mnav{display:grid !important;grid-template-columns:repeat(3,1fr) !important;gap:7px !important}.mnav a{padding:9px 2px !important;font-size:12.5px !important;white-space:nowrap}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"AVS Setu Global","url":"https://avssetuglobal.com/","logo":"https://avssetuglobal.com/og-image.jpg","email":"sales@avssetuglobal.com","telephone":"+91-8010641067","openingHours":"Su-Fr 09:30-20:30","slogan":"Source · Connect · Deliver","address":{"@type":"PostalAddress","addressLocality":"Delhi","addressCountry":"IN"},"areaServed":["IN","Worldwide"],"description":"B2B supplier of ply, MDF, Rockwool, power tools, medical and office furniture, material handling, agriculture equipment and decorative lights in India, with export sourcing from India."}</script>
 </head>
@@ -358,9 +359,9 @@ footer a:hover{color:var(--amber)}
     </a>
     <nav class="links" id="links">
       <a href="#catalogue">Products</a>
-      <a href="#export">Export</a>
       <a href="#about">About</a>
       <a href="#sell">Sell With Us</a>
+      <a href="#export">Export</a>
       <a href="#contact">Contact</a>
     </nav>
     <a class="btn btn-amber" href="#quote">Get Best Price</a>
@@ -371,9 +372,9 @@ footer a:hover{color:var(--amber)}
 <div class="hero" id="top">
   <div class="wrap">
     <div>
-      <nav class="mnav" aria-label="Quick links"><a href="#catalogue">Products</a><a href="#export">Export</a><a href="#about">About</a><a href="#sell">Sell With Us</a><a href="#contact">Contact</a></nav>
+      <nav class="mnav" aria-label="Quick links"><a href="#catalogue">Products</a><a href="#about">About</a><a class="mq" href="#quote">Get Best Price</a><a href="#sell">Sell With Us</a><a href="#export">Export</a><a href="#contact">Contact</a></nav>
       <img class="mhero" src="images/hero/hero-b-m.jpg" alt="Warehouse stocked with plywood, power tools, material handling equipment, furniture and medical beds">
-      <span class="eyebrow">B2B Material Supply &amp; Export Partner</span>
+      <span class="eyebrow">B2B Material Supplier</span>
       <h1>Many products. <span>One trusted vendor.</span></h1>
       <p>Manufacturers want big orders of one product. You need many products — in the right specification, on time. We bridge that gap: sourcing from verified factories and delivering mixed orders under one purchase order and one GST invoice.</p>
       <div class="aud">
