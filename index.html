@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MFGC5PPK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+
 <meta charset="UTF-8">
 <meta name="google-site-verification" content="gB5eElEw8QlFBuKpjW2Z4ML7wBezoY0aJeJhDuBsyao" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -991,7 +998,7 @@ form.addEventListener("submit", e=>{
     `Mobile: ${v("phone")}`, v("email")?`Email: ${v("email")}`:null,
     mode==="export" ? `Destination: ${v("city")}, ${v("country")}` : `Delivery: ${v("city")}, ${v("state")}`, v("msg")?`Message: ${v("msg")}`:null
   ].filter(x=>x!==null).join("\n");
-  let mailOk=null; fetch("https://formsubmit.co/ajax/sales@avssetuglobal.com",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(Object.assign({_subject:"New quote request — "+v("name"),_template:"box",name:v("name"),phone:v("phone"),email:v("email")||"-",request:text}, v("email")?{_autoresponse:avsAutoReply(v("name"), mode==="listed"&&P.find(x=>x.id===sel.value)?P.find(x=>x.id===sel.value).name:(mode==="custom"?v("cname"):"export sourcing"), false)}:{}))}).then(r=>r.json()).then(j=>{const el=document.getElementById("mailst"); if(el) el.innerHTML=(j&&String(j.success)==="true")?"✓ Sent to our sales team.":"<span style='color:#b4520a'>Could not send automatically — please tap Email us.</span>";}).catch(()=>{const el=document.getElementById("mailst"); if(el) el.innerHTML="<span style='color:#b4520a'>Could not send automatically — please tap Email us.</span>";});
+  let mailOk=null; fetch("https://formsubmit.co/ajax/sales@avssetuglobal.com",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(Object.assign({_subject:"New quote request — "+v("name"),_template:"box",name:v("name"),phone:v("phone"),email:v("email")||"-",request:text}, v("email")?{_autoresponse:avsAutoReply(v("name"), mode==="listed"&&P.find(x=>x.id===sel.value)?P.find(x=>x.id===sel.value).name:(mode==="custom"?v("cname"):"export sourcing"), false)}:{}))}).then(r=>r.json()).then(j=>{if(j&&String(j.success)==="true"){try{gtag("event","generate_lead",{form_name:"get_best_price",enquiry_type:mode});}catch(_){}} const el=document.getElementById("mailst"); if(el) el.innerHTML=(j&&String(j.success)==="true")?"✓ Sent to our sales team.":"<span style='color:#b4520a'>Could not send automatically — please tap Email us.</span>";}).catch(()=>{const el=document.getElementById("mailst"); if(el) el.innerHTML="<span style='color:#b4520a'>Could not send automatically — please tap Email us.</span>";});
 
   openModal(`<div class="done">
     <div class="ok"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="m5 12 5 5 9-10" stroke="#1f8a5b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -1017,7 +1024,7 @@ document.querySelectorAll(".regTxt").forEach(e=>e.textContent=CONFIG.regOffice);
 (function(){const f=document.getElementById('sellForm'),box=document.getElementById('sellBox'); if(!f||!box) return; const open=()=>{f.style.display='block';box.style.display='none';}; document.getElementById('sellOpen').onclick=open; document.querySelectorAll('a[href="#sell"]').forEach(a=>a.addEventListener('click',open)); if(location.hash==='#sell') open(); if(/supplier=thanks/.test(location.search)){box.style.display='none';f.style.display='none';}})();
 
 (function(){const f=document.getElementById('sellForm'); if(!f) return; const err=document.getElementById('sellErr');
- if(/supplier=thanks/.test(location.search)){f.style.display='none';const so=document.getElementById('sellOpen'); if(so) so.style.display='none';document.getElementById('sellThanks').style.display='block';}
+ if(/supplier=thanks/.test(location.search)){ try{gtag('event','supplier_submission',{form_name:'sell_with_us'});}catch(_){} f.style.display='none';const so=document.getElementById('sellOpen'); if(so) so.style.display='none';document.getElementById('sellThanks').style.display='block';}
  f.addEventListener('submit',e=>{err.style.display='none'; const ph=document.getElementById('sellPhotos').files, li=document.getElementById('sellList').files; let tot=0; for(const x of ph) tot+=x.size; for(const x of li) tot+=x.size;
   let m=''; if(ph.length>3) m='Please attach maximum 3 photos.'; else if(tot>10*1024*1024) m='Files are too large ('+(tot/1048576).toFixed(1)+' MB). Total must be under 10 MB — send smaller photos.'; else if(!f.checkValidity()){m='Please fill all fields marked *.'; f.reportValidity();}
   if(m){e.preventDefault(); err.textContent=m; err.style.display='block'; return;} const ar=document.getElementById('sellAR'); if(ar) ar.value=avsAutoReply(f.querySelector('[name="Contact person"]').value, f.querySelector('[name="Product name"]').value, true);});})();
@@ -1035,7 +1042,7 @@ document.getElementById("menuBtn").onclick = () => links.classList.toggle("open"
 links.addEventListener("click", ()=>links.classList.remove("open"));
 </script>
 <script>
-if(/quote=thanks/.test(location.search)){ let n=""; try{n=sessionStorage.getItem("rfqName")||"";}catch(_){}
+if(/quote=thanks/.test(location.search)){ try{gtag("event","generate_lead",{form_name:"get_best_price",enquiry_type:"with_attachment"});}catch(_){} let n=""; try{n=sessionStorage.getItem("rfqName")||"";}catch(_){}
  const t="Hello AVS Setu Global, I have just sent a quote request with an attached requirement sheet from your website."+(n?" Name: "+n+".":"");
  setTimeout(()=>openModal(`<div class="done"><div class="ok"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="m5 12 5 5 9-10" stroke="#1f8a5b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Request received</h3><p>Your requirement and attachment have been sent to our sales team. We will reply within 24 hours on working days (Sun–Fri).</p></div>`),300);
  history.replaceState(null,"",location.pathname+"#quote"); }
